@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useSpring, animated as a } from 'react-spring'
 import { Helmet } from 'react-helmet'
 import styled from '@emotion/styled'
-import { Global, css } from '@emotion/core'
+import { Global } from '@emotion/core'
 import { globalStyle } from '../style'
 import FrontSide from './frontSide'
 import BackSide from './backSide'
@@ -12,11 +12,18 @@ import './styles.css'
 
 export default () => {
   const [flipped, setFlipped] = useState(false)
-  const { transform, opacity } = useSpring({
-    opacity: flipped ? 1 : 0,
-    transform: `perspective(600px) rotateY(${flipped ? 180 : 0}deg)`,
+  const frontSideStyle = useSpring({
+    opacity: flipped ? 0 : 1,
+    transform: `perspective(200px) rotateY(${flipped ? 180 : 0}deg)`,
     config: { mass: 5, tension: 500, friction: 80 },
   })
+
+  const backSideStyle = useSpring({
+    opacity: flipped ? 1 : 0,
+    transform: `perspective(200px) rotateY(${flipped ? 0 : -180}deg)`,
+    config: { mass: 5, tension: 500, friction: 80 },
+  })
+
   return (
     <>
       <Helmet>
@@ -43,10 +50,28 @@ export default () => {
         <Global
           styles={globalStyle}
         />
-        <a.div style={{ opacity: opacity.interpolate((o) => 1 - o), transform, height: '100%' }}>
+        <a.div style={{
+          width: '100%',
+          height: '100%',
+          position: 'absolute',
+          opacity: frontSideStyle.opacity,
+          transform: frontSideStyle.transform,
+          border: '1px solid black',
+        }}
+        >
           <FrontSide />
         </a.div>
-        <a.div class="c front" style={{ opacity, transform: transform.interpolate((t) => `${t} rotateX(180deg)`) }}><BackSide /></a.div>
+        <a.div style={{
+          width: '100%',
+          height: '100%',
+          position: 'absolute',
+          opacity: backSideStyle.opacity,
+          transform: backSideStyle.transform,
+          border: '1px solid black',
+        }}
+        >
+          <BackSide />
+        </a.div>
       </Container>
     </>
   )
