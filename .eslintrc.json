@@ -25,6 +25,6 @@
     ],
     "rules": {
       "react/jsx-filename-extension": [0],
-      "semi": [2, "never"]
+      "semi": [2, "never"],
     }
 }
