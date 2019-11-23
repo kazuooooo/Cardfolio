@@ -5882,6 +5882,14 @@ gatsby-telemetry@^1.1.36:
     stack-utils "1.0.2"
     uuid "3.3.3"
 
+gatsby-transformer-json@^2.2.19:
+  version "2.2.19"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-json/-/gatsby-transformer-json-2.2.19.tgz#94622196c595b244af82b01db073626af8396fe4"
+  integrity sha512-oH+0lG0vQgYE/jaxNep438bIbCC3oNsEIUU090X5F/10rtva35CoieKXZ48+h/4d2393uf6H3E9grqPU+A4ErQ==
+  dependencies:
+    "@babel/runtime" "^7.7.2"
+    bluebird "^3.7.1"
+
 gatsby-transformer-sharp@^2.3.3:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-2.3.3.tgz#221b5d3f31f8d9b5399ca7ba5c6ee1d34518a0da"

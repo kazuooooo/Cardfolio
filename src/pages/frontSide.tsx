@@ -1,16 +1,30 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import { graphql, useStaticQuery } from 'gatsby'
 import { FontSize } from '../style'
 
-interface Props {
+const FrontSide = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allPagesJson {
+        edges {
+          node {
+            frontSide {
+              jobTitle
+              name
+            }
+          }
+        }
+      }
+    }
+  `)
+  return (
+    <Container>
+      <JobTitle>{data.allPagesJson.edges[0].node.frontSide.jobTitle}</JobTitle>
+      <Name>{data.allPagesJson.edges[0].node.frontSide.name}</Name>
+    </Container>
+  )
 }
-
-const FrontSide = (props: Props) => (
-  <Container>
-    <JobTitle>エンジニア</JobTitle>
-    <Name>松本和也</Name>
-  </Container>
-)
 
 const Container = styled.div`
   height: 100%;
