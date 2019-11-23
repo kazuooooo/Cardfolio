@@ -6,23 +6,27 @@
   "selfIntroduction": {
     "title": "自己紹介",
     "description": "初めましてフリーランスエンジニアの松本和也と申します。毎日楽しく開発してますよ。毎日楽しく開発してますよ。毎日楽しく開発してますよ。\n毎日楽しく開発してますよ。\n毎日楽しく開発してますよ。\n毎日楽しく開発してますよ。",
-    "socialURLs": {
-      "github": {
+    "socialURLs": [
+      {
+        "name": "github",
         "id": "kazuooooo",
-        "url": ""
+        "url": "https://github.com/kazuooooo"
       },
-      "facebook": {
+      {
+        "name": "facebook",
         "id": "matsumotokazuya7",
-        "url": ""
+        "url": "https://www.facebook.com/matsumoto.kazuya.52"
       },
-      "medium": {
+      {
+        "name": "medium",
         "id": "kazuooooo",
-        "url": ""
+        "url": "https://medium.com/@matsumotokazuya"
       },
-      "qiita": {
+      {
+        "name": "qiita",
         "id": "matsumotokazuya",
-        "url": ""
+        "url": "https://qiita.com/kazuooooo"
       }
-    }
+    ]
   }
 }

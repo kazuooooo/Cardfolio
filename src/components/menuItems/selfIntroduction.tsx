@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import { css } from '@emotion/core'
-import * as SocialIcon from '../../images/socialIcons'
+import SocialIcon from '../../images/socialIcons'
 import { Margins, FontSize } from '../../style'
 
 interface Props {}
@@ -23,12 +23,17 @@ const SelfIntroduction = () => {
       selfIntroduction {
         description
         title
+        socialURLs {
+          name
+          id
+          url
+        }
       }
     }
   }
 `)
   const { selfIntroduction } = data.dataJson
-
+  const { socialURLs } = selfIntroduction
   return (
     <Container>
       <InnerContainer>
@@ -40,22 +45,12 @@ const SelfIntroduction = () => {
       </InnerContainer>
       {/* TODO: GraphQL周り勉強して、画像含めたAPI化 */}
       <SocialLinks>
-        <SocialLink href="https://github.com/kazuooooo" target="_blank">
-          <img src={SocialIcon.Github} alt="github" />
-          <p>kazuooooo</p>
-        </SocialLink>
-        <SocialLink href="https://www.facebook.com/matsumoto.kazuya.52" target="_blank">
-          <img src={SocialIcon.Facebook} alt="facebook" />
-          <p>matsumotokazuya7</p>
-        </SocialLink>
-        <SocialLink href="https://qiita.com/kazuooooo" target="_blank">
-          <img src={SocialIcon.Qiita} alt="qiita" />
-          <p>kazuooooo</p>
-        </SocialLink>
-        <SocialLink href="https://medium.com/@matsumotokazuya" target="_blank">
-          <img src={SocialIcon.Medium} alt="medium" />
-          <p>matsumotokazuya7</p>
-        </SocialLink>
+        {socialURLs.map((social: { name: string, url: string, id: string }) => (
+          <SocialLink href={social.url} target="_blank">
+            <img src={SocialIcon[social.name]} alt={social.name} />
+            <p>{social.id}</p>
+          </SocialLink>
+        ))}
       </SocialLinks>
     </Container>
   )

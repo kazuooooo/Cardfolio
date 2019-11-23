@@ -1,4 +1,11 @@
-export { default as Facebook } from './fb.png'
-export { default as Github } from './github.png'
-export { default as Qiita } from './qiita.png'
-export { default as Medium } from './medium.png'
+import Facebook from './fb.png'
+import Github from './github.png'
+import Qiita from './qiita.png'
+import Medium from './medium.png'
+
+export enum Socials {
+  github = Github,
+  qiita = Qiita,
+  medium = Medium,
+  facebookFacebook,
+}
