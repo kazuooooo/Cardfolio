@@ -4,15 +4,15 @@ import { useSpring, animated as a } from 'react-spring'
 import { graphql, useStaticQuery } from 'gatsby'
 import { FontSize } from '../style'
 import CloseIcon from '../images/close.png'
-import { SelfIntroduction } from '../components/menuItems'
+import MenuItems, { MenuItemKey } from '../components/menuItems'
 
 interface Props {
 }
 
 const BackSide = (props: Props) => {
-  const [isShowModal, showModal] = useState(true)
+  const [currentModal, showModal] = useState<MenuItemKey | null>(null)
   const modalStyle = useSpring({
-    top: isShowModal ? '5%' : '100%',
+    top: currentModal ? '5%' : '100%',
     config: {
       mass: 1, tension: 500, friction: 70,
     },
@@ -21,9 +21,9 @@ const BackSide = (props: Props) => {
   return (
     <Container>
       <ItemsContainer>
-        <MenuItemLink onClick={() => showModal(true)}>自己紹介</MenuItemLink>
+        <MenuItemLink onClick={() => showModal(MenuItemKey.SelfIntroduction)}>自己紹介</MenuItemLink>
         <MenuItemLink>キャリア</MenuItemLink>
-        <MenuItemLink>プロダクト</MenuItemLink>
+        <MenuItemLink onClick={() => showModal(MenuItemKey.Works)}>ワークス</MenuItemLink>
         <MenuItemLink>スキルセット</MenuItemLink>
         <MenuItemLink>コンタクト</MenuItemLink>
       </ItemsContainer>
@@ -43,7 +43,7 @@ const BackSide = (props: Props) => {
           }}
           src={CloseIcon}
         />
-        <SelfIntroduction />
+        {currentModal && MenuItems[currentModal]()}
       </a.div>
     </Container>
   )

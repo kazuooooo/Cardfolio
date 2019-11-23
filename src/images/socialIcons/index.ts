@@ -3,9 +3,11 @@ import Github from './github.png'
 import Qiita from './qiita.png'
 import Medium from './medium.png'
 
-export enum Socials {
+enum Socials {
   github = Github,
   qiita = Qiita,
   medium = Medium,
-  facebookFacebook,
+  facebook = Facebook,
 }
+
+export default Socials

@@ -46,7 +46,7 @@ export default () => {
           }
         </script>
       </Helmet>
-      <Container onClick={() => setFlipped(!flipped)}>
+      <Container>
         <Global
           styles={globalStyle}
         />
