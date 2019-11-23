@@ -66,10 +66,10 @@ const MenuItemLink = styled.a`
 `
 
 const CloseButton = styled.img`
-  height: 32px;
-  width: 32px;
+  height: 24px;
+  width: 24px;
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 12px;
+  right: 12px;
 `
 export default BackSide

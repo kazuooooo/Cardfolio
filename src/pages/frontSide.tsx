@@ -6,22 +6,19 @@ import { FontSize } from '../style'
 const FrontSide = () => {
   const data = useStaticQuery(graphql`
     query {
-      allPagesJson {
-        edges {
-          node {
-            frontSide {
-              jobTitle
-              name
-            }
-          }
+      dataJson {
+        frontSide {
+          jobTitle
+          name
         }
       }
     }
   `)
+  const { frontSide } = data.dataJson
   return (
     <Container>
-      <JobTitle>{data.allPagesJson.edges[0].node.frontSide.jobTitle}</JobTitle>
-      <Name>{data.allPagesJson.edges[0].node.frontSide.name}</Name>
+      <JobTitle>{frontSide.jobTitle}</JobTitle>
+      <Name>{frontSide.name}</Name>
     </Container>
   )
 }
