@@ -1,40 +1,49 @@
 import React, { useState } from 'react'
 import styled from '@emotion/styled'
 import { useSpring, animated as a } from 'react-spring'
+import { graphql, useStaticQuery } from 'gatsby'
 import { FontSize } from '../style'
 import CloseIcon from '../images/close.png'
+import { SelfIntroduction } from '../components/menuItems'
 
 interface Props {
 }
 
 const BackSide = (props: Props) => {
-  const [isShowModal, showModal] = useState(false)
+  const [isShowModal, showModal] = useState(true)
   const modalStyle = useSpring({
-    top: isShowModal ? '0%' : '100%',
+    top: isShowModal ? '5%' : '100%',
     config: {
-      mass: 1, tension: 1000, friction: 70,
+      mass: 1, tension: 500, friction: 70,
     },
   })
 
   return (
     <Container>
       <ItemsContainer>
-        <ItemLink onClick={() => showModal(true)}>自己紹介</ItemLink>
-        <ItemLink>キャリア</ItemLink>
-        <ItemLink>プロダクト</ItemLink>
-        <ItemLink>スキルセット</ItemLink>
-        <ItemLink>コンタクト</ItemLink>
+        <MenuItemLink onClick={() => showModal(true)}>自己紹介</MenuItemLink>
+        <MenuItemLink>キャリア</MenuItemLink>
+        <MenuItemLink>プロダクト</MenuItemLink>
+        <MenuItemLink>スキルセット</MenuItemLink>
+        <MenuItemLink>コンタクト</MenuItemLink>
       </ItemsContainer>
       <a.div style={{
         top: modalStyle.top,
         height: '100%',
         width: '100%',
         position: 'absolute',
-        border: '1px solid black',
         backgroundColor: 'white',
+        boxShadow: '0 -3px 6px rgba(0, 0, 0, 0.3)',
       }}
       >
-        <CloseButton onClick={() => showModal(false)} src={CloseIcon} />
+        <CloseButton
+          onClick={(e) => {
+            e.stopPropagation()
+            showModal(false)
+          }}
+          src={CloseIcon}
+        />
+        <SelfIntroduction />
       </a.div>
     </Container>
   )
@@ -52,7 +61,7 @@ const ItemsContainer = styled.section`
   display: flex;
   flex-direction: column;
 `
-const ItemLink = styled.a`
+const MenuItemLink = styled.a`
   font-size: ${FontSize.SubTitle}
 `
 
