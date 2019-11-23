@@ -8,8 +8,13 @@ interface Props {
 
 const BackSide = (props: Props) => (
   <Container>
-    <JobTitle>デザイナー</JobTitle>
-    <Name>裏です</Name>
+    <ItemsContainer>
+      <Item>自己紹介</Item>
+      <Item>キャリア</Item>
+      <Item>プロダクト</Item>
+      <Item>スキルセット</Item>
+      <Item>コンタクト</Item>
+    </ItemsContainer>
   </Container>
 )
 
@@ -21,11 +26,11 @@ const Container = styled.div`
   justify-content: center;
 `
 
-const Name = styled.div`
-  font-size: 36px;
+const ItemsContainer = styled.section`
+  display: flex;
+  flex-direction: column;
 `
-const JobTitle = styled.div`
-  font-size: ${FontSize.SubTitle};
+const Item = styled.a`
+  font-size: ${FontSize.SubTitle}
 `
-
 export default BackSide

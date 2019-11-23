@@ -11,7 +11,7 @@ import BackSide from './backSide'
 import './styles.css'
 
 export default () => {
-  const [flipped, setFlipped] = useState(false)
+  const [flipped, setFlipped] = useState(true)
   const frontSideStyle = useSpring({
     opacity: flipped ? 0 : 1,
     transform: `perspective(200px) rotateY(${flipped ? 180 : 0}deg)`,
