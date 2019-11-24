@@ -14,10 +14,13 @@ export enum FontSize {
 
 export enum Margins {
   Side = '64px',
-  LittleRelated = '28px',
+  NotRelated = '28px',
+  LittleRelated = '16px',
   Related = '8px',
   StronglyRelated = '4px'
 }
+
+export const shadow = '0 -3px 6px rgba(0, 0, 0, 0.3)'
 
 export const globalStyle = css`
   ${emotionReset}
@@ -26,6 +29,9 @@ export const globalStyle = css`
     font-weight: 500;
     font-style: normal;
     color: ${Colors.Text};
+  }
+  p {
+    font-size: ${FontSize.Text};
     line-height: 2.0em;
   }
   a {

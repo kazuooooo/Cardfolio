@@ -7,9 +7,27 @@ import { css } from '@emotion/core'
 import SocialIcon from '../../images/socialIcons'
 import { Margins, FontSize } from '../../style'
 
-interface Props {}
 
-const SelfIntroduction = () => {
+interface Social {
+  name: string
+  id: string
+  url: string
+}
+
+interface Props {
+  data: {
+    description: string
+    menuItemTitle: string
+    socialURLs: Social[]
+  }
+}
+
+const SelfIntroduction = (props: Props) => {
+  const {
+    description,
+    menuItemTitle,
+    socialURLs,
+  } = props.data
   const data = useStaticQuery(graphql`
   query {
     file(relativePath: { eq: "profile.png" }) {
@@ -19,33 +37,20 @@ const SelfIntroduction = () => {
         }
       }
     }
-    dataJson {
-      selfIntroduction {
-        description
-        title
-        socialURLs {
-          name
-          id
-          url
-        }
-      }
-    }
   }
 `)
-  const { selfIntroduction } = data.dataJson
-  const { socialURLs } = selfIntroduction
   return (
     <Container>
       <InnerContainer>
-        <Title>{selfIntroduction.title}</Title>
+        <Title>{menuItemTitle}</Title>
         <Img css={IconStyle} fixed={data.file.childImageSharp.fixed} />
         <Description>
-          {selfIntroduction.description}
+          {description}
         </Description>
       </InnerContainer>
       {/* TODO: GraphQL周り勉強して、画像含めたAPI化 */}
       <SocialLinks>
-        {socialURLs.map((social: { name: string, url: string, id: string }) => (
+        {socialURLs.map((social: Social) => (
           <SocialLink href={social.url} target="_blank">
             <img src={SocialIcon[social.name]} alt={social.name} />
             <p>{social.id}</p>
@@ -70,10 +75,10 @@ const InnerContainer = styled.div`
 const Title = styled.h1``
 
 const IconStyle = css`
-  margin-top: ${Margins.LittleRelated}
+  margin-top: ${Margins.NotRelated};
 `
 const Description = styled.p`
-  margin-top: ${Margins.LittleRelated}
+  margin-top: ${Margins.NotRelated};
 `
 const SocialLinks = styled.section`
   margin-top: 48px;

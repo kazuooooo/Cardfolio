@@ -2,8 +2,8 @@ import selfIntroductionComponent from './selfIntroduction'
 import worksComponent from './works'
 
 export enum MenuItemKey {
-  SelfIntroduction = 'SelfIntroduction',
-  Works = 'Works'
+  SelfIntroduction = 'selfIntroduction',
+  Works = 'works'
 }
 
 export default {

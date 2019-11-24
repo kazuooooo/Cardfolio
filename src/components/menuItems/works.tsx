@@ -1,43 +1,70 @@
 /* eslint-disable no-use-before-define */
 import React from 'react'
 import styled from '@emotion/styled'
-import { graphql, useStaticQuery } from 'gatsby'
+import { FontSize, Margins, shadow } from '../../style'
 
-interface Props {}
-
-const Works = () => {
-  const data = useStaticQuery(graphql`
-  query {
-    file(relativePath: { eq: "profile.png" }) {
-      childImageSharp {
-        fixed(width: 200, height: 200) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    dataJson {
-      selfIntroduction {
-        description
-        title
-        socialURLs {
-          name
-          id
-          url
-        }
-      }
-    }
+interface IWorkItem {
+  title: string
+  description: string
+  url: string
+  ogpURL: string
+}
+interface Props {
+  data: {
+    menuItemTitle: string
+    workItems: IWorkItem[]
   }
-`)
-  const { selfIntroduction } = data.dataJson
+}
+
+const Works = (props: Props) => {
+  const { data: { menuItemTitle, workItems } } = props
   return (
     <Container>
-      works
+      <Title>{menuItemTitle}</Title>
+      {
+          workItems.map((workItem: IWorkItem) => (
+            <WorkItem href={workItem.url}>
+              <img src={workItem.ogpURL} alt={workItem.title} />
+              <div>
+                <h3>{workItem.title}</h3>
+                <p>{workItem.description}</p>
+              </div>
+            </WorkItem>
+          ))
+        }
     </Container>
   )
 }
 
 
 const Container = styled.div`
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 24px;
+`
+
+const Title = styled.h1`
+  text-align: center;
+  margin-bottom: 28px;
+`
+
+const WorkItem = styled.a`
+  display: inline-block;
+  img {
+    width: 100%;
+    height: 165px;
+    object-fit: cover;
+  }
+  div {
+    padding: 12px;
+    p {
+      margin-top: ${Margins.Related}
+    }
+    h3 {
+      font-size: ${FontSize.SubTitle};
+    }
+  }
+  box-shadow: ${shadow};
 `
 export default Works

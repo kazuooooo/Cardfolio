@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from '@emotion/styled'
 import { useSpring, animated as a } from 'react-spring'
 import { graphql, useStaticQuery } from 'gatsby'
-import { FontSize } from '../style'
+import { FontSize, shadow, Margins } from '../style'
 import CloseIcon from '../images/close.png'
 import MenuItems, { MenuItemKey } from '../components/menuItems'
 
@@ -10,7 +10,7 @@ interface Props {
 }
 
 const BackSide = (props: Props) => {
-  const [currentModal, showModal] = useState<MenuItemKey | null>(null)
+  const [currentModal, showModal] = useState<MenuItemKey | null>(MenuItemKey.Works)
   const modalStyle = useSpring({
     top: currentModal ? '5%' : '100%',
     config: {
@@ -18,6 +18,31 @@ const BackSide = (props: Props) => {
     },
   })
 
+  // Load all data here, migth be better way...
+  const data = useStaticQuery(graphql`
+                  query {
+                    dataJson {
+                      selfIntroduction {
+                        menuItemTitle
+                        description
+                        socialURLs {
+                          name
+                          id
+                          url
+                        }
+                      }
+                      works {
+                        menuItemTitle
+                        workItems {
+                          title
+                          description
+                          url
+                          ogpURL
+                        }
+                      }
+                    }
+                  }
+                `).dataJson
   return (
     <Container>
       <ItemsContainer>
@@ -33,17 +58,17 @@ const BackSide = (props: Props) => {
         width: '100%',
         position: 'absolute',
         backgroundColor: 'white',
-        boxShadow: '0 -3px 6px rgba(0, 0, 0, 0.3)',
+        boxShadow: shadow,
       }}
       >
         <CloseButton
           onClick={(e) => {
             e.stopPropagation()
-            showModal(false)
+            showModal(null)
           }}
           src={CloseIcon}
         />
-        {currentModal && MenuItems[currentModal]()}
+        {currentModal && MenuItems[currentModal]({ data: data[currentModal] })}
       </a.div>
     </Container>
   )
@@ -62,7 +87,8 @@ const ItemsContainer = styled.section`
   flex-direction: column;
 `
 const MenuItemLink = styled.a`
-  font-size: ${FontSize.SubTitle}
+  font-size: ${FontSize.SubTitle};
+  margin-top: ${Margins.LittleRelated};
 `
 
 const CloseButton = styled.img`
