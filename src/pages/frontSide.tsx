@@ -32,6 +32,7 @@ const Container = styled.div`
 `
 
 const Name = styled.div`
+  margin-top: 20px;
   font-size: 36px;
 `
 const JobTitle = styled.div`

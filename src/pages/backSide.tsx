@@ -40,6 +40,15 @@ const BackSide = (props: Props) => {
                           ogpURL
                         }
                       }
+                      contact {
+                        menuItemTitle
+                        description
+                        contactItems {
+                          type
+                          label
+                          href
+                        }
+                      }
                     }
                   }
                 `).dataJson
@@ -50,7 +59,7 @@ const BackSide = (props: Props) => {
         <MenuItemLink>キャリア</MenuItemLink>
         <MenuItemLink onClick={() => showModal(MenuItemKey.Works)}>ワークス</MenuItemLink>
         <MenuItemLink>スキルセット</MenuItemLink>
-        <MenuItemLink>コンタクト</MenuItemLink>
+        <MenuItemLink onClick={() => showModal(MenuItemKey.Contact)}>コンタクト</MenuItemLink>
       </ItemsContainer>
       <a.div style={{
         top: modalStyle.top,

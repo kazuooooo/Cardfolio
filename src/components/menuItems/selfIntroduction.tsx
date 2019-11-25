@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 import { graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import { css } from '@emotion/core'
-import SocialIcon from '../../images/socialIcons'
+import Images from '../../images'
 import { Margins, FontSize } from '../../style'
 
 
@@ -52,7 +52,7 @@ const SelfIntroduction = (props: Props) => {
       <SocialLinks>
         {socialURLs.map((social: Social) => (
           <SocialLink href={social.url} target="_blank">
-            <img src={SocialIcon[social.name]} alt={social.name} />
+            <img src={Images[social.name]} alt={social.name} />
             <p>{social.id}</p>
           </SocialLink>
         ))}
