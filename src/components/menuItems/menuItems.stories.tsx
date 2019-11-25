@@ -15,3 +15,7 @@ storiesOf('MenuItems/contact', module)
   .add('default', () => (
     <MenuItems.contact data={data.contact} />
   ))
+storiesOf('MenuItems/career', module)
+  .add('default', () => (
+    <MenuItems.career data={data.career} />
+  ))

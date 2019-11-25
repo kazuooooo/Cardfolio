@@ -55,5 +55,25 @@
         "href": "https://m.me/matsumoto.kazuya.52"
       }
     ]
+  },
+  "career": {
+    "menuItemTitle": "キャリア",
+    "careerItems": [
+      {
+        "year": 2014,
+        "title": "hogejob",
+        "description": "longlongdescriptionaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      {
+        "year": 2014,
+        "title": "hogejob",
+        "description": "longlongdescription"
+      },
+      {
+        "year": 2014,
+        "title": "hogejob",
+        "description": "longlongdescription"
+      }
+    ]
   }
 }

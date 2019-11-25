@@ -1,0 +1,96 @@
+/* eslint-disable no-use-before-define */
+import React from 'react'
+import styled from '@emotion/styled'
+import { FontSize, Margins, shadow } from '../../style'
+import Images from '../../images'
+
+interface ICareerItem {
+  year: number
+  title: string
+  description: string
+}
+
+interface Props {
+  data: {
+    menuItemTitle: string
+    description: string
+    careerItems: ICareerItem[]
+  }
+}
+
+const Career = (props: Props) => {
+  const { data: { menuItemTitle, careerItems } } = props
+  return (
+    <Container>
+      <Title>{menuItemTitle}</Title>
+      <TimeLine />
+      <CareerItemList>
+        {
+        careerItems.map((career) => (
+          <CareerItem>
+            <CareerItemCircle />
+            <CareerItemYear>{career.year}</CareerItemYear>
+            <CareerItemTextBox>
+              <h2>{career.title}</h2>
+              <p>
+                {career.description}
+              </p>
+            </CareerItemTextBox>
+          </CareerItem>
+        ))
+      }
+
+      </CareerItemList>
+    </Container>
+  )
+}
+
+
+const Container = styled.div`
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+`
+const Title = styled.h1`
+  text-align: center;
+  margin-bottom: 28px;
+`
+const TimeLine = styled.div`
+  width: 3px;
+  background-color: #707070;
+  position: absolute;
+  height: 100%;
+  left: 60px;
+  border-radius: 1px;
+`
+const CareerItemList = styled.div`
+  position: absolute;
+  left: 52px;
+`
+const CareerItem = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: top;
+  margin-top: 36px;
+`
+const CareerItemCircle = styled.div`
+  margin-top: 6px;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background-color: #13C782;
+`
+const CareerItemYear = styled.p`
+  margin-left: ${Margins.Related}
+`
+const CareerItemTextBox = styled.div`
+  margin-left: ${Margins.LittleRelated};
+  max-width: 200px;
+  p {
+    margin-top: ${Margins.Related};
+    overflow-wrap: break-word;
+    line-height: 1.5em;
+  }
+`
+export default Career

@@ -6,10 +6,7 @@ import { FontSize, shadow, Margins } from '../style'
 import CloseIcon from '../images/close.png'
 import MenuItems, { MenuItemKey } from '../components/menuItems'
 
-interface Props {
-}
-
-const BackSide = (props: Props) => {
+const BackSide = () => {
   const [currentModal, showModal] = useState<MenuItemKey | null>(MenuItemKey.Works)
   const modalStyle = useSpring({
     top: currentModal ? '5%' : '100%',
@@ -49,6 +46,14 @@ const BackSide = (props: Props) => {
                           href
                         }
                       }
+                      career {
+                        menuItemTitle
+                        careerItems {
+                          year
+                          title
+                          description
+                        }
+                      }
                     }
                   }
                 `).dataJson
@@ -56,7 +61,7 @@ const BackSide = (props: Props) => {
     <Container>
       <ItemsContainer>
         <MenuItemLink onClick={() => showModal(MenuItemKey.SelfIntroduction)}>自己紹介</MenuItemLink>
-        <MenuItemLink>キャリア</MenuItemLink>
+        <MenuItemLink onClick={() => showModal(MenuItemKey.Career)}>キャリア</MenuItemLink>
         <MenuItemLink onClick={() => showModal(MenuItemKey.Works)}>ワークス</MenuItemLink>
         <MenuItemLink>スキルセット</MenuItemLink>
         <MenuItemLink onClick={() => showModal(MenuItemKey.Contact)}>コンタクト</MenuItemLink>
