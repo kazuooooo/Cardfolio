@@ -7,6 +7,8 @@
   "dependencies": {
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.23",
+    "@storybook/cli": "^5.2.6",
+    "@storybook/react": "^5.2.6",
     "emotion-reset": "^2.0.3",
     "gatsby": "^2.17.11",
     "gatsby-image": "^2.2.31",
@@ -27,9 +29,15 @@
     "react-spring": "^8.0.27"
   },
   "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@storybook/addon-actions": "^5.2.6",
+    "@storybook/addon-links": "^5.2.6",
+    "@storybook/addon-viewport": "^5.2.6",
+    "@storybook/addons": "^5.2.6",
     "@types/react-helmet": "^5.0.14",
     "@typescript-eslint/eslint-plugin": "^2.8.0",
     "@typescript-eslint/parser": "^2.8.0",
+    "babel-loader": "^8.0.6",
     "eslint": "^6.7.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.7.0",
@@ -54,7 +62,9 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "type-check": "tsc --noEmit",
-    "lint": "eslint ./"
+    "lint": "eslint ./",
+    "storybook": "NODE_ENV=production start-storybook -s public",
+    "build-storybook": "NODE_ENV=production build-storybook -s public"
   },
   "repository": {
     "type": "git",
