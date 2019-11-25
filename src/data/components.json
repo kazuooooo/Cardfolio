@@ -75,5 +75,44 @@
         "description": "longlongdescription"
       }
     ]
+  },
+  "skillSet": {
+    "menuItemTitle": "スキルセット",
+    "skillDatum": [
+      {
+        "categoryTitle": "バックエンド",
+        "data": {
+          "labels": ["Ruby / Rails", "Python", "NodeJS"],
+          "datasets": [
+            {
+              "backgroundColor": ["#F8545B", "#54B3F8", "#34D97A"],
+              "data": [5, 2, 3]
+            }
+          ]
+        },
+        "toolTipData": [
+          "結構得意",
+          "うーむ",
+          "hello!"  
+        ]
+      },
+      {
+        "categoryTitle": "フロントエンド",
+        "data": {
+          "labels": ["React", "Vue"],
+          "datasets": [
+            {
+              "backgroundColor": ["#F8545B", "#54B3F8"],
+              "data": [4, 2]
+            }
+          ]
+        },
+        "toolTipData": [
+          "結構得意",
+          "うーむ",
+          "hello!"  
+        ]
+      }
+    ]
   }
 }

@@ -7,15 +7,19 @@ storiesOf('MenuItems/SelfIntroduction', module)
   .add('default', () => (
     <MenuItems.selfIntroduction data={data.selfIntroduction} />
   ))
-storiesOf('MenuItems/works', module)
+storiesOf('MenuItems/Works', module)
   .add('default', () => (
     <MenuItems.works data={data.works} />
   ))
-storiesOf('MenuItems/contact', module)
+storiesOf('MenuItems/Contact', module)
   .add('default', () => (
     <MenuItems.contact data={data.contact} />
   ))
-storiesOf('MenuItems/career', module)
+storiesOf('MenuItems/Career', module)
   .add('default', () => (
     <MenuItems.career data={data.career} />
+  ))
+storiesOf('MenuItems/SkillSet', module)
+  .add('default', () => (
+    <MenuItems.skillSet data={data.skillSet} />
   ))

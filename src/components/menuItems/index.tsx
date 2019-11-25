@@ -1,18 +1,21 @@
 import selfIntroductionComponent from './selfIntroduction'
 import worksComponent from './works'
-import contact from './contact'
-import career from './career'
+import contactComponent from './contact'
+import careerComponent from './career'
+import skillSetComponent from './skillset'
 
 export enum MenuItemKey {
   SelfIntroduction = 'selfIntroduction',
   Works = 'works',
   Contact = 'contact',
-  Career = 'career'
+  Career = 'career',
+  SkillSet = 'skillSet'
 }
 
 export default {
   [MenuItemKey.SelfIntroduction]: selfIntroductionComponent,
   [MenuItemKey.Works]: worksComponent,
-  [MenuItemKey.Contact]: contact,
-  [MenuItemKey.Career]: career,
+  [MenuItemKey.Contact]: contactComponent,
+  [MenuItemKey.Career]: careerComponent,
+  [MenuItemKey.SkillSet]: skillSetComponent,
 }

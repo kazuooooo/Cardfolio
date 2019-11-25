@@ -54,6 +54,20 @@ const BackSide = () => {
                           description
                         }
                       }
+                      skillSet {
+                        menuItemTitle
+                        skillDatum {
+                          categoryTitle
+                          data {
+                            labels
+                            datasets {
+                              backgroundColor
+                              data
+                            }
+                          }
+                          toolTipData
+                        }
+                      }
                     }
                   }
                 `).dataJson
@@ -63,7 +77,7 @@ const BackSide = () => {
         <MenuItemLink onClick={() => showModal(MenuItemKey.SelfIntroduction)}>自己紹介</MenuItemLink>
         <MenuItemLink onClick={() => showModal(MenuItemKey.Career)}>キャリア</MenuItemLink>
         <MenuItemLink onClick={() => showModal(MenuItemKey.Works)}>ワークス</MenuItemLink>
-        <MenuItemLink>スキルセット</MenuItemLink>
+        <MenuItemLink onClick={() => showModal(MenuItemKey.SkillSet)}>スキルセット</MenuItemLink>
         <MenuItemLink onClick={() => showModal(MenuItemKey.Contact)}>コンタクト</MenuItemLink>
       </ItemsContainer>
       <a.div style={{
