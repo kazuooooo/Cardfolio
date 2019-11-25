@@ -27,8 +27,7 @@ export default () => {
       <Helmet>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Matsumoto</title>
-        <link rel="canonical" href="http://mysite.com/example" />
+        <title>Welcome to MatsumotoKazuya.jp!</title>
         <script>
           {
             `
@@ -44,7 +43,7 @@ export default () => {
           }
         </script>
       </Helmet>
-      <Container>
+      <Container onClick={() => setFlipped(!flipped)}>
         <a.div style={{
           width: '100%',
           height: '100%',
