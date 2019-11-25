@@ -3,12 +3,11 @@ import { useSpring, animated as a } from 'react-spring'
 import { Helmet } from 'react-helmet'
 import styled from '@emotion/styled'
 import { Global } from '@emotion/core'
-import { globalStyle } from '../style'
 import FrontSide from './frontSide'
 import BackSide from './backSide'
+import '../globalStyle.css'
+import '../reset.css'
 
-
-import './styles.css'
 
 export default () => {
   const [flipped, setFlipped] = useState(true)
@@ -29,7 +28,7 @@ export default () => {
       <Helmet>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>MatsumotoKazuya</title>
+        <title>Matsumoto</title>
         <link rel="canonical" href="http://mysite.com/example" />
         <script>
           {
@@ -47,9 +46,6 @@ export default () => {
         </script>
       </Helmet>
       <Container>
-        <Global
-          styles={globalStyle}
-        />
         <a.div style={{
           width: '100%',
           height: '100%',
