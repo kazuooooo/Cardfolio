@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from '@emotion/styled'
 import { useSpring, animated as a } from 'react-spring'
 import { graphql, useStaticQuery } from 'gatsby'
+import { Global, css } from '@emotion/core'
 import { FontSize, shadow, Margins } from '../style'
 import CloseIcon from '../images/close.png'
 import MenuItems, { MenuItemKey } from '../components/menuItems'
@@ -73,6 +74,20 @@ const BackSide = () => {
                 `).dataJson
   return (
     <Container>
+      {
+        // HACK: To hide modal under container
+        //       disable scroll.
+        !currentModal && (
+          <Global styles={
+            css`
+              body {
+                overflow: hidden
+              }
+            `
+          }
+          />
+        )
+      }
       <ItemsContainer>
         <MenuItemLink onClick={() => showModal(MenuItemKey.SelfIntroduction)}>自己紹介</MenuItemLink>
         <MenuItemLink onClick={() => showModal(MenuItemKey.Career)}>キャリア</MenuItemLink>
