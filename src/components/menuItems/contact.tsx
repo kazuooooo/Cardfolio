@@ -3,6 +3,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { FontSize, Margins, shadow } from '../../style'
 import Images from '../../images'
+import { graphql } from 'gatsby'
 
 interface IContactItem {
   type: string
@@ -17,6 +18,20 @@ interface Props {
     contactItems: IContactItem[]
   }
 }
+
+export const dataQuery = graphql`
+  fragment ContactData on DataJson {
+    contact {
+      menuItemTitle
+      description
+      contactItems {
+        type
+        label
+        href
+      }
+    }
+  }
+`
 
 const Works = (props: Props) => {
   const { data: { menuItemTitle, description, contactItems } } = props

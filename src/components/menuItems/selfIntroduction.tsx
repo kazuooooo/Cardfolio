@@ -7,7 +7,6 @@ import { css } from '@emotion/core'
 import Images from '../../images'
 import { Margins, FontSize } from '../../style'
 
-
 interface Social {
   name: string
   id: string
@@ -22,31 +21,39 @@ interface Props {
   }
 }
 
-const SelfIntroduction = (props: Props) => {
-  const {
-    description,
-    menuItemTitle,
-    socialURLs,
-  } = props.data
-  const data = useStaticQuery(graphql`
-  query {
-    file(relativePath: { eq: "profile.png" }) {
-      childImageSharp {
-        fixed(width: 200, height: 200) {
-          ...GatsbyImageSharpFixed
-        }
+export const dataQuery = graphql`
+  fragment SelfIntroductionData on DataJson {
+    selfIntroduction {
+      menuItemTitle
+      description
+      socialURLs {
+        name
+        id
+        url
       }
     }
   }
-`)
+`
+
+const SelfIntroduction = (props: Props) => {
+  const { description, menuItemTitle, socialURLs } = props.data
+  const data = useStaticQuery(graphql`
+    query {
+      file(relativePath: { eq: "profile.png" }) {
+        childImageSharp {
+          fixed(width: 200, height: 200) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `)
   return (
     <Container>
       <InnerContainer>
         <Title>{menuItemTitle}</Title>
         <Img css={IconStyle} fixed={data.file.childImageSharp.fixed} />
-        <Description>
-          {description}
-        </Description>
+        <Description>{description}</Description>
       </InnerContainer>
       {/* TODO: GraphQL周り勉強して、画像含めたAPI化 */}
       <SocialLinks>
@@ -60,7 +67,6 @@ const SelfIntroduction = (props: Props) => {
     </Container>
   )
 }
-
 
 const Container = styled.div`
   padding: 24px;

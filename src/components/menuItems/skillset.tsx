@@ -2,11 +2,12 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { HorizontalBar } from 'react-chartjs-2'
-import { FontSize, Margins, shadow } from '../../style'
+import { graphql } from "gatsby"
+import { FontSize, Margins, shadow } from "../../style"
 
 interface ISkillData {
-  categoryTitle: string,
-  data: any,
+  categoryTitle: string
+  data: any
   toolTipData: string[]
 }
 
@@ -17,23 +18,44 @@ interface Props {
   }
 }
 
+export const dataQuery = graphql`
+  fragment SkillSetData on DataJson {
+    skillSet {
+      menuItemTitle
+      skillDatum {
+        categoryTitle
+        data {
+          labels
+          datasets {
+            backgroundColor
+            data
+          }
+        }
+        toolTipData
+      }
+    }
+  }
+`
+
 const SkillSet = (props: Props) => {
-  const { data: { menuItemTitle, skillDatum } } = props
+  const {
+    data: { menuItemTitle, skillDatum },
+  } = props
   return (
     <Container>
       <Title>{menuItemTitle}</Title>
-      {
-        skillDatum.map(({ categoryTitle, data, toolTipData }) => (
-          <>
-            <CategoryTitle>{categoryTitle}</CategoryTitle>
-            <HorizontalBar
-              data={data}
-              options={{
-                legend: {
-                  display: false,
-                },
-                scales: {
-                  xAxes: [{
+      {skillDatum.map(({ categoryTitle, data, toolTipData }) => (
+        <>
+          <CategoryTitle>{categoryTitle}</CategoryTitle>
+          <HorizontalBar
+            data={data}
+            options={{
+              legend: {
+                display: false,
+              },
+              scales: {
+                xAxes: [
+                  {
                     display: true,
                     ticks: {
                       suggestedMin: 0,
@@ -41,24 +63,23 @@ const SkillSet = (props: Props) => {
                       stepSize: 1,
                       callback: (value, index, values) => `Lv${value}`,
                     },
-                  }],
-                },
-                tooltips: {
-                  callbacks: {
-                    label(tooltipItem, data) {
-                      return toolTipData[+tooltipItem.index]
-                    },
+                  },
+                ],
+              },
+              tooltips: {
+                callbacks: {
+                  label(tooltipItem, data) {
+                    return toolTipData[+tooltipItem.index]
                   },
                 },
-              }}
-            />
-          </>
-        ))
-      }
+              },
+            }}
+          />
+        </>
+      ))}
     </Container>
   )
 }
-
 
 const Container = styled.div`
   flex-direction: column;

@@ -24,55 +24,11 @@ const BackSide = () => {
   const data = useStaticQuery(graphql`
     query {
       dataJson {
-        selfIntroduction {
-          menuItemTitle
-          description
-          socialURLs {
-            name
-            id
-            url
-          }
-        }
-        works {
-          menuItemTitle
-          workItems {
-            title
-            description
-            url
-            ogpURL
-          }
-        }
-        contact {
-          menuItemTitle
-          description
-          contactItems {
-            type
-            label
-            href
-          }
-        }
-        career {
-          menuItemTitle
-          careerItems {
-            year
-            title
-            description
-          }
-        }
-        skillSet {
-          menuItemTitle
-          skillDatum {
-            categoryTitle
-            data {
-              labels
-              datasets {
-                backgroundColor
-                data
-              }
-            }
-            toolTipData
-          }
-        }
+        ...SelfIntroductionData
+        ...WorksData
+        ...ContactData
+        ...CareerData
+        ...SkillSetData
       }
     }
   `).dataJson
@@ -106,13 +62,7 @@ const BackSide = () => {
           boxShadow: shadow,
         }}
       >
-        <CloseButton
-          onClick={(e) => {
-            e.stopPropagation()
-            showModal(null)
-          }}
-          src={CloseIcon}
-        />
+        <CloseButton onClick={() => showModal(null)} src={CloseIcon} />
         {currentModal && MenuItems[currentModal]({ data: data[currentModal] })}
       </a.div>
     </Container>

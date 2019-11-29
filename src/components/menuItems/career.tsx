@@ -1,6 +1,7 @@
 /* eslint-disable no-use-before-define */
 import React from 'react'
 import styled from '@emotion/styled'
+import { graphql } from 'gatsby'
 import { FontSize, Margins, shadow } from '../../style'
 import Images from '../../images'
 
@@ -18,33 +19,42 @@ interface Props {
   }
 }
 
+export const dataQuery = graphql`
+  fragment CareerData on DataJson {
+    career {
+      menuItemTitle
+      careerItems {
+        year
+        title
+        description
+      }
+    }
+  }
+`
+
 const Career = (props: Props) => {
-  const { data: { menuItemTitle, careerItems } } = props
+  const {
+    data: { menuItemTitle, careerItems },
+  } = props
   return (
     <Container>
       <Title>{menuItemTitle}</Title>
       <TimeLine />
       <CareerItemList>
-        {
-        careerItems.map((career) => (
+        {careerItems.map((career) => (
           <CareerItem>
             <CareerItemCircle />
             <CareerItemYear>{career.year}</CareerItemYear>
             <CareerItemTextBox>
               <h2>{career.title}</h2>
-              <p>
-                {career.description}
-              </p>
+              <p>{career.description}</p>
             </CareerItemTextBox>
           </CareerItem>
-        ))
-      }
-
+        ))}
       </CareerItemList>
     </Container>
   )
 }
-
 
 const Container = styled.div`
   flex-direction: column;
@@ -79,10 +89,10 @@ const CareerItemCircle = styled.div`
   height: 20px;
   width: 20px;
   border-radius: 10px;
-  background-color: #13C782;
+  background-color: #13c782;
 `
 const CareerItemYear = styled.p`
-  margin-left: ${Margins.Related}
+  margin-left: ${Margins.Related};
 `
 const CareerItemTextBox = styled.div`
   margin-left: ${Margins.LittleRelated};

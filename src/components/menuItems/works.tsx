@@ -1,7 +1,8 @@
 /* eslint-disable no-use-before-define */
 import React from 'react'
 import styled from '@emotion/styled'
-import { FontSize, Margins, shadow } from '../../style'
+import { graphql } from "gatsby"
+import { FontSize, Margins, shadow } from "../../style"
 
 interface IWorkItem {
   title: string
@@ -16,26 +17,39 @@ interface Props {
   }
 }
 
+export const dataQuery = graphql`
+  fragment WorksData on DataJson {
+    works {
+      menuItemTitle
+      workItems {
+        title
+        description
+        url
+        ogpURL
+      }
+    }
+  }
+`
+
 const Works = (props: Props) => {
-  const { data: { menuItemTitle, workItems } } = props
+  const {
+    data: { menuItemTitle, workItems },
+  } = props
   return (
     <Container>
       <Title>{menuItemTitle}</Title>
-      {
-          workItems.map((workItem: IWorkItem) => (
-            <WorkItem href={workItem.url}>
-              <img src={workItem.ogpURL} alt={workItem.title} />
-              <div>
-                <h3>{workItem.title}</h3>
-                <p>{workItem.description}</p>
-              </div>
-            </WorkItem>
-          ))
-        }
+      {workItems.map((workItem: IWorkItem) => (
+        <WorkItem href={workItem.url}>
+          <img src={workItem.ogpURL} alt={workItem.title} />
+          <div>
+            <h3>{workItem.title}</h3>
+            <p>{workItem.description}</p>
+          </div>
+        </WorkItem>
+      ))}
     </Container>
   )
 }
-
 
 const Container = styled.div`
   flex-direction: column;
@@ -59,7 +73,7 @@ const WorkItem = styled.a`
   div {
     padding: 12px;
     p {
-      margin-top: ${Margins.Related}
+      margin-top: ${Margins.Related};
     }
     h3 {
       font-size: ${FontSize.SubTitle};
