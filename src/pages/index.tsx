@@ -43,7 +43,7 @@ export default () => {
           }
         </script>
       </Helmet>
-      <Container onClick={() => setFlipped(!flipped)}>
+      <Container>
         <a.div style={{
           width: '100%',
           height: '100%',

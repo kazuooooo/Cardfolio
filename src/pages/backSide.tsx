@@ -8,101 +8,103 @@ import CloseIcon from '../images/close.png'
 import MenuItems, { MenuItemKey } from '../components/menuItems'
 
 const BackSide = () => {
-  const [currentModal, showModal] = useState<MenuItemKey | null>(MenuItemKey.Works)
+  const [currentModal, showModal] = useState<MenuItemKey | null>(
+    MenuItemKey.Works,
+  )
   const modalStyle = useSpring({
     top: currentModal ? '5%' : '100%',
     config: {
-      mass: 1, tension: 500, friction: 70,
+      mass: 1,
+      tension: 500,
+      friction: 70,
     },
   })
 
   // Load all data here, migth be better way...
   const data = useStaticQuery(graphql`
-                  query {
-                    dataJson {
-                      selfIntroduction {
-                        menuItemTitle
-                        description
-                        socialURLs {
-                          name
-                          id
-                          url
-                        }
-                      }
-                      works {
-                        menuItemTitle
-                        workItems {
-                          title
-                          description
-                          url
-                          ogpURL
-                        }
-                      }
-                      contact {
-                        menuItemTitle
-                        description
-                        contactItems {
-                          type
-                          label
-                          href
-                        }
-                      }
-                      career {
-                        menuItemTitle
-                        careerItems {
-                          year
-                          title
-                          description
-                        }
-                      }
-                      skillSet {
-                        menuItemTitle
-                        skillDatum {
-                          categoryTitle
-                          data {
-                            labels
-                            datasets {
-                              backgroundColor
-                              data
-                            }
-                          }
-                          toolTipData
-                        }
-                      }
-                    }
-                  }
-                `).dataJson
+    query {
+      dataJson {
+        selfIntroduction {
+          menuItemTitle
+          description
+          socialURLs {
+            name
+            id
+            url
+          }
+        }
+        works {
+          menuItemTitle
+          workItems {
+            title
+            description
+            url
+            ogpURL
+          }
+        }
+        contact {
+          menuItemTitle
+          description
+          contactItems {
+            type
+            label
+            href
+          }
+        }
+        career {
+          menuItemTitle
+          careerItems {
+            year
+            title
+            description
+          }
+        }
+        skillSet {
+          menuItemTitle
+          skillDatum {
+            categoryTitle
+            data {
+              labels
+              datasets {
+                backgroundColor
+                data
+              }
+            }
+            toolTipData
+          }
+        }
+      }
+    }
+  `).dataJson
   return (
     <Container>
-      {
-        // HACK: To hide modal under container
-        //       disable scroll.
-        !currentModal && (
-          <Global styles={
-            css`
-              body {
-                overflow: hidden
-              }
-            `
-          }
-          />
-        )
-      }
+      {// HACK: To hide modal under container disable scroll.
+      !currentModal && (
+        <Global
+          styles={css`
+            body {
+              overflow: hidden;
+            }
+          `}
+        />
+      )
+}
       <ItemsContainer>
-        <MenuItemLink onClick={() => showModal(MenuItemKey.SelfIntroduction)}>自己紹介</MenuItemLink>
-        <MenuItemLink onClick={() => showModal(MenuItemKey.Career)}>キャリア</MenuItemLink>
-        <MenuItemLink onClick={() => showModal(MenuItemKey.Works)}>ワークス</MenuItemLink>
-        <MenuItemLink onClick={() => showModal(MenuItemKey.SkillSet)}>スキルセット</MenuItemLink>
-        <MenuItemLink onClick={() => showModal(MenuItemKey.Contact)}>コンタクト</MenuItemLink>
+        {Object.values(MenuItemKey).map((val) => (
+          <MenuItemLink onClick={() => showModal(val)}>
+            {data[val].menuItemTitle}
+          </MenuItemLink>
+        ))}
       </ItemsContainer>
-      <a.div style={{
-        top: modalStyle.top,
-        height: '100%',
-        width: '100%',
-        position: 'absolute',
-        backgroundColor: 'white',
-        boxShadow: shadow,
-      }}
+      <a.div
+        style={{
+          top: modalStyle.top,
+          height: '100%',
+          width: '100%',
+          position: 'absolute',
+          backgroundColor: 'white',
+          boxShadow: shadow,
+        }}
       >
         <CloseButton
           onClick={(e) => {
