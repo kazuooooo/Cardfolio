@@ -10,7 +10,7 @@ import '../reset.css'
 
 export default ({ data }) => {
   const localeData = data.file.childIndexJson
-  const [flipped, setFlipped] = useState(true)
+  const [flipped, setFlipped] = useState(false)
   const frontSideStyle = useSpring({
     opacity: flipped ? 0 : 1,
     transform: `perspective(200px) rotateY(${flipped ? 180 : 0}deg)`,
@@ -42,7 +42,7 @@ export default ({ data }) => {
             `}
         </script>
       </Helmet>
-      <Container>
+      <Container onClick={() => setFlipped(!flipped)}>
         <a.div
           style={{
             width: '100%',
