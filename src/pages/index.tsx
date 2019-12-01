@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useSpring, animated as a } from 'react-spring'
 import { Helmet } from 'react-helmet'
+import { graphql } from 'gatsby'
 import styled from '@emotion/styled'
 import FrontSide from '../components/frontSide'
 import BackSide from '../components/backSide'

@@ -1,8 +1,7 @@
 /* eslint-disable no-use-before-define */
 import React from 'react'
 import styled from '@emotion/styled'
-import { graphql, useStaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
 import { css } from '@emotion/core'
 import Images from '../../images'
 import { Margins, FontSize } from '../../style'
@@ -23,22 +22,11 @@ interface Props {
 
 const SelfIntroduction = (props: Props) => {
   const { description, menuItemTitle, socialURLs } = props.data
-  const data = useStaticQuery(graphql`
-    query {
-      file(relativePath: { eq: "profile.png" }) {
-        childImageSharp {
-          fixed(width: 200, height: 200) {
-            ...GatsbyImageSharpFixed
-          }
-        }
-      }
-    }
-  `)
   return (
     <Container>
       <InnerContainer>
         <Title>{menuItemTitle}</Title>
-        <Img css={IconStyle} fixed={data.file.childImageSharp.fixed} />
+        <img src={Images.profile} css={IconStyle} alt="profile" />
         <Description>{description}</Description>
       </InnerContainer>
       {/* TODO: GraphQL周り勉強して、画像含めたAPI化 */}
@@ -82,6 +70,8 @@ const Title = styled.h1``
 
 const IconStyle = css`
   margin-top: ${Margins.NotRelated};
+  widht: 200px;
+  height: 200px;
 `
 const Description = styled.p`
   margin-top: ${Margins.NotRelated};
