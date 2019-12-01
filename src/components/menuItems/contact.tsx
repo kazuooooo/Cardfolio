@@ -1,9 +1,9 @@
 /* eslint-disable no-use-before-define */
 import React from 'react'
 import styled from '@emotion/styled'
+import { graphql } from 'gatsby'
 import { FontSize, Margins, shadow } from '../../style'
 import Images from '../../images'
-import { graphql } from 'gatsby'
 
 interface IContactItem {
   type: string
@@ -19,8 +19,26 @@ interface Props {
   }
 }
 
+const Works = (props: Props) => {
+  const {
+    data: { menuItemTitle, description, contactItems },
+  } = props
+  return (
+    <Container>
+      <Title>{menuItemTitle}</Title>
+      <Description>{description}</Description>
+      {contactItems.map((contact) => (
+        <ContactLink href={contact.href} target="_blank">
+          <img src={Images[contact.type]} />
+          <p>{contact.label}</p>
+        </ContactLink>
+      ))}
+    </Container>
+  )
+}
+
 export const dataQuery = graphql`
-  fragment ContactData on DataJson {
+  fragment ContactData on IndexJson {
     contact {
       menuItemTitle
       description
@@ -32,25 +50,6 @@ export const dataQuery = graphql`
     }
   }
 `
-
-const Works = (props: Props) => {
-  const { data: { menuItemTitle, description, contactItems } } = props
-  return (
-    <Container>
-      <Title>{menuItemTitle}</Title>
-      <Description>{description}</Description>
-      {
-        contactItems.map((contact) => (
-          <ContactLink href={contact.href} target="_blank">
-            <img src={Images[contact.type]} />
-            <p>{contact.label}</p>
-          </ContactLink>
-        ))
-      }
-    </Container>
-  )
-}
-
 
 const Container = styled.div`
   flex-direction: column;

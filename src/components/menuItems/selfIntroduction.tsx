@@ -21,20 +21,6 @@ interface Props {
   }
 }
 
-export const dataQuery = graphql`
-  fragment SelfIntroductionData on DataJson {
-    selfIntroduction {
-      menuItemTitle
-      description
-      socialURLs {
-        name
-        id
-        url
-      }
-    }
-  }
-`
-
 const SelfIntroduction = (props: Props) => {
   const { description, menuItemTitle, socialURLs } = props.data
   const data = useStaticQuery(graphql`
@@ -67,6 +53,20 @@ const SelfIntroduction = (props: Props) => {
     </Container>
   )
 }
+
+export const dataQuery = graphql`
+  fragment SelfIntroductionData on IndexJson {
+    selfIntroduction {
+      menuItemTitle
+      description
+      socialURLs {
+        name
+        id
+        url
+      }
+    }
+  }
+`
 
 const Container = styled.div`
   padding: 24px;

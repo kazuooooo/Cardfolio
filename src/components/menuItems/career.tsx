@@ -19,19 +19,6 @@ interface Props {
   }
 }
 
-export const dataQuery = graphql`
-  fragment CareerData on DataJson {
-    career {
-      menuItemTitle
-      careerItems {
-        year
-        title
-        description
-      }
-    }
-  }
-`
-
 const Career = (props: Props) => {
   const {
     data: { menuItemTitle, careerItems },
@@ -55,6 +42,19 @@ const Career = (props: Props) => {
     </Container>
   )
 }
+
+export const dataQuery = graphql`
+  fragment CareerData on IndexJson {
+    career {
+      menuItemTitle
+      careerItems {
+        year
+        title
+        description
+      }
+    }
+  }
+`
 
 const Container = styled.div`
   flex-direction: column;

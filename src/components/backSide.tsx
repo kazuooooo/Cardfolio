@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
 import styled from '@emotion/styled'
 import { useSpring, animated as a } from 'react-spring'
-import { graphql, useStaticQuery } from 'gatsby'
 import { Global, css } from '@emotion/core'
 import { FontSize, shadow, Margins } from '../style'
 import CloseIcon from '../images/close.png'
-import MenuItems, { MenuItemKey } from '../components/menuItems'
+import MenuItems, { MenuItemKey } from './menuItems'
 
-const BackSide = () => {
+const BackSide = ({ data }) => {
   const [currentModal, showModal] = useState<MenuItemKey | null>(
     MenuItemKey.Works,
   )
@@ -19,19 +18,6 @@ const BackSide = () => {
       friction: 70,
     },
   })
-
-  // Load all data here, migth be better way...
-  const data = useStaticQuery(graphql`
-    query {
-      dataJson {
-        ...SelfIntroductionData
-        ...WorksData
-        ...ContactData
-        ...CareerData
-        ...SkillSetData
-      }
-    }
-  `).dataJson
   return (
     <Container>
       {// HACK: To hide modal under container disable scroll.

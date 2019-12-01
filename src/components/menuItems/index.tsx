@@ -9,7 +9,7 @@ export enum MenuItemKey {
   Works = 'works',
   Contact = 'contact',
   Career = 'career',
-  SkillSet = 'skillSet'
+  SkillSet = 'skillSet',
 }
 
 export default {

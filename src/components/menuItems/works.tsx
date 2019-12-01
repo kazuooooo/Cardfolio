@@ -1,8 +1,8 @@
 /* eslint-disable no-use-before-define */
 import React from 'react'
 import styled from '@emotion/styled'
-import { graphql } from "gatsby"
-import { FontSize, Margins, shadow } from "../../style"
+import { graphql } from 'gatsby'
+import { FontSize, Margins, shadow } from '../../style'
 
 interface IWorkItem {
   title: string
@@ -16,20 +16,6 @@ interface Props {
     workItems: IWorkItem[]
   }
 }
-
-export const dataQuery = graphql`
-  fragment WorksData on DataJson {
-    works {
-      menuItemTitle
-      workItems {
-        title
-        description
-        url
-        ogpURL
-      }
-    }
-  }
-`
 
 const Works = (props: Props) => {
   const {
@@ -50,6 +36,20 @@ const Works = (props: Props) => {
     </Container>
   )
 }
+
+export const dataQuery = graphql`
+  fragment WorksData on IndexJson {
+    works {
+      menuItemTitle
+      workItems {
+        title
+        description
+        url
+        ogpURL
+      }
+    }
+  }
+`
 
 const Container = styled.div`
   flex-direction: column;

@@ -2,13 +2,13 @@ import React, { useState } from 'react'
 import { useSpring, animated as a } from 'react-spring'
 import { Helmet } from 'react-helmet'
 import styled from '@emotion/styled'
-import FrontSide from './frontSide'
-import BackSide from './backSide'
+import FrontSide from '../components/frontSide'
+import BackSide from '../components/backSide'
 import '../globalStyle.css'
 import '../reset.css'
 
-
-export default () => {
+export default ({ data }) => {
+  const localeData = data.file.childIndexJson
   const [flipped, setFlipped] = useState(true)
   const frontSideStyle = useSpring({
     opacity: flipped ? 0 : 1,
@@ -29,8 +29,7 @@ export default () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Welcome to MatsumotoKazuya.jp!</title>
         <script>
-          {
-            `
+          {`
             (function(d) {
               var config = {
                 kitId: 'jwd1shg',
@@ -39,37 +38,53 @@ export default () => {
               },
               h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
             })(document);
-            `
-          }
+            `}
         </script>
       </Helmet>
       <Container>
-        <a.div style={{
-          width: '100%',
-          height: '100%',
-          position: 'absolute',
-          opacity: frontSideStyle.opacity,
-          transform: frontSideStyle.transform,
-          border: '1px solid black',
-        }}
+        <a.div
+          style={{
+            width: '100%',
+            height: '100%',
+            position: 'absolute',
+            opacity: frontSideStyle.opacity,
+            transform: frontSideStyle.transform,
+            border: '1px solid black',
+          }}
         >
-          <FrontSide />
+          <FrontSide data={localeData.frontSide} />
         </a.div>
-        <a.div style={{
-          width: '100%',
-          height: '100%',
-          position: 'absolute',
-          opacity: backSideStyle.opacity,
-          transform: backSideStyle.transform,
-          border: '1px solid black',
-        }}
+        <a.div
+          style={{
+            width: '100%',
+            height: '100%',
+            position: 'absolute',
+            opacity: backSideStyle.opacity,
+            transform: backSideStyle.transform,
+            border: '1px solid black',
+          }}
         >
-          <BackSide />
+          <BackSide data={localeData} />
         </a.div>
       </Container>
     </>
   )
 }
+
+export const query = graphql`
+  query Index($locale: String) {
+    file(name: { eq: $locale }, relativeDirectory: { eq: "index" }) {
+      childIndexJson {
+        ...FrontSideData
+        ...SelfIntroductionData
+        ...WorksData
+        ...ContactData
+        ...CareerData
+        ...SkillSetData
+      }
+    }
+  }
+`
 
 const Container = styled.div`
   height: 100vh;

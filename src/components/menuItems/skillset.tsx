@@ -2,8 +2,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { HorizontalBar } from 'react-chartjs-2'
-import { graphql } from "gatsby"
-import { FontSize, Margins, shadow } from "../../style"
+import { graphql } from 'gatsby'
+import { FontSize, Margins, shadow } from '../../style'
 
 interface ISkillData {
   categoryTitle: string
@@ -17,25 +17,6 @@ interface Props {
     skillDatum: ISkillData[]
   }
 }
-
-export const dataQuery = graphql`
-  fragment SkillSetData on DataJson {
-    skillSet {
-      menuItemTitle
-      skillDatum {
-        categoryTitle
-        data {
-          labels
-          datasets {
-            backgroundColor
-            data
-          }
-        }
-        toolTipData
-      }
-    }
-  }
-`
 
 const SkillSet = (props: Props) => {
   const {
@@ -80,6 +61,25 @@ const SkillSet = (props: Props) => {
     </Container>
   )
 }
+
+export const dataQuery = graphql`
+  fragment SkillSetData on IndexJson {
+    skillSet {
+      menuItemTitle
+      skillDatum {
+        categoryTitle
+        data {
+          labels
+          datasets {
+            backgroundColor
+            data
+          }
+        }
+        toolTipData
+      }
+    }
+  }
+`
 
 const Container = styled.div`
   flex-direction: column;
