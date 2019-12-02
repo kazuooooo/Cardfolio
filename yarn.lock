@@ -13903,6 +13903,11 @@ react-textarea-autosize@^7.1.0:
     "@babel/runtime" "^7.1.2"
     prop-types "^15.6.0"
 
+react-use-gesture@^6.0.14:
+  version "6.0.14"
+  resolved "https://registry.yarnpkg.com/react-use-gesture/-/react-use-gesture-6.0.14.tgz#ab2d35ef72a5fb6060a6160eb12568c276f8a4b1"
+  integrity sha512-d9cnZJ0DOFd3FIO76J776DyhtbODgbxGKu19lvc1aSNTnRV5EKr9V4Uda188l2Qh0Va3pqWGxEQlw72r2cmnFQ==
+
 react@^16.11.0:
   version "16.11.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.11.0.tgz#d294545fe62299ccee83363599bf904e4a07fdbb"

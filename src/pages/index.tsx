@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React, { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
@@ -7,21 +8,25 @@ import FrontSide from '../components/frontSide'
 import BackSide from '../components/backSide'
 import '../globalStyle.css'
 import '../reset.css'
+import { useDrag } from 'react-use-gesture'
+import { animated, useSpring } from 'react-spring'
 
 export default ({ data }) => {
   const localeData = data.file.childIndexJson
-  const [flipped, setFlipped] = useState(false)
-  const [degree, setDegree] = useState(0)
+  const [{ transform }, set] = useSpring(() => ({ transform: 'rotateY(0deg)' }))
+  // console.log('degree,: ', degree)
+  // const [flipped, setFlipped] = useState(false)
 
-  // useEffect(() => {
-  //   const interval = setInterval(async () => {
-  //     await setDegree((prevDegree) => prevDegree + 1)
-  //   }, 10)
-
-  //   return () => {
-  //     clearInterval(interval)
-  //   }
-  // }, [])
+  const bind = useDrag(({
+ down, xy, movement: [mx, my], distance 
+}) => {
+    console.log('mx: ', mx)
+    console.log('my: ', my)
+    console.log('down: ', down)
+    console.log('xy: ', xy)
+    console.log('distance: ', distance)
+    set({ transform: `rotateY(${mx}deg)` })
+  })
 
   return (
     <>
@@ -42,15 +47,23 @@ export default ({ data }) => {
             `}
         </script>
       </Helmet>
-      <Container onClick={() => setFlipped(!flipped)}>
-        <Card css={{ transform: `rotateY(${degree}deg)` }}>
+      <Container>
+        <animated.div
+          {...bind()}
+          style={{
+            transform,
+            transformStyle: 'preserve-3d',
+            height: '100%',
+            width: '100%',
+          }}
+        >
           <FrontSideContainer>
             <FrontSide data={localeData.frontSide} />
           </FrontSideContainer>
           <BackSideContainer>
             <BackSide data={localeData} />
           </BackSideContainer>
-        </Card>
+        </animated.div>
       </Container>
     </>
   )
@@ -74,10 +87,10 @@ export const query = graphql`
 const Container = styled.div`
   height: 100vh;
   transform: perspective(1000px);
+  transform-style: preserve-3d;
 `
 
 const Card = styled.div`
-  transform-style: preserve-3d;
   height: 100%;
   width: 100%;
   position: relative;
