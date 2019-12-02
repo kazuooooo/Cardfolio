@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { useSpring, animated as a } from 'react-spring'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import styled from '@emotion/styled'
@@ -11,17 +10,6 @@ import '../reset.css'
 export default ({ data }) => {
   const localeData = data.file.childIndexJson
   const [flipped, setFlipped] = useState(false)
-  const frontSideStyle = useSpring({
-    opacity: flipped ? 0 : 1,
-    transform: `perspective(200px) rotateY(${flipped ? 180 : 0}deg)`,
-    config: { mass: 5, tension: 500, friction: 80 },
-  })
-
-  const backSideStyle = useSpring({
-    opacity: flipped ? 1 : 0,
-    transform: `perspective(200px) rotateY(${flipped ? 0 : -180}deg)`,
-    config: { mass: 5, tension: 500, friction: 80 },
-  })
 
   return (
     <>
@@ -43,30 +31,14 @@ export default ({ data }) => {
         </script>
       </Helmet>
       <Container onClick={() => setFlipped(!flipped)}>
-        <a.div
-          style={{
-            width: '100%',
-            height: '100%',
-            position: 'absolute',
-            opacity: frontSideStyle.opacity,
-            transform: frontSideStyle.transform,
-            border: '1px solid black',
-          }}
-        >
-          <FrontSide data={localeData.frontSide} />
-        </a.div>
-        <a.div
-          style={{
-            width: '100%',
-            height: '100%',
-            position: 'absolute',
-            opacity: backSideStyle.opacity,
-            transform: backSideStyle.transform,
-            border: '1px solid black',
-          }}
-        >
-          <BackSide data={localeData} />
-        </a.div>
+        <Card>
+          <FrontSideContainer>
+            <FrontSide data={localeData.frontSide} />
+          </FrontSideContainer>
+          <BackSideContainer>
+            <BackSide data={localeData} />
+          </BackSideContainer>
+        </Card>
       </Container>
     </>
   )
@@ -89,5 +61,27 @@ export const query = graphql`
 
 const Container = styled.div`
   height: 100vh;
+  transform: perspective(1000px);
+`
+
+const Card = styled.div`
+  transform-style: preserve-3d;
+  height: 100%;
   width: 100%;
+  position: relative;
+`
+const FrontSideContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  background-color: yellow;
+  position: absolute;
+  backface-visibility: hidden;
+`
+const BackSideContainer = styled.div`
+  height: 100%;
+  width: 100%;
+  background-color: green;
+  position: absolute;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
 `
