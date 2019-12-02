@@ -8,7 +8,7 @@ import MenuItems, { MenuItemKey } from './menuItems'
 
 const BackSide = ({ data }) => {
   const [currentModal, showModal] = useState<MenuItemKey | null>(
-    MenuItemKey.Works,
+    null,
   )
   const modalStyle = useSpring({
     top: currentModal ? '5%' : '100%',

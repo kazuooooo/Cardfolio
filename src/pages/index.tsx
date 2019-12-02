@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import styled from '@emotion/styled'
+import { css } from '@emotion/core'
 import FrontSide from '../components/frontSide'
 import BackSide from '../components/backSide'
 import '../globalStyle.css'
@@ -10,6 +11,17 @@ import '../reset.css'
 export default ({ data }) => {
   const localeData = data.file.childIndexJson
   const [flipped, setFlipped] = useState(false)
+  const [degree, setDegree] = useState(0)
+
+  // useEffect(() => {
+  //   const interval = setInterval(async () => {
+  //     await setDegree((prevDegree) => prevDegree + 1)
+  //   }, 10)
+
+  //   return () => {
+  //     clearInterval(interval)
+  //   }
+  // }, [])
 
   return (
     <>
@@ -31,7 +43,7 @@ export default ({ data }) => {
         </script>
       </Helmet>
       <Container onClick={() => setFlipped(!flipped)}>
-        <Card>
+        <Card css={{ transform: `rotateY(${degree}deg)` }}>
           <FrontSideContainer>
             <FrontSide data={localeData.frontSide} />
           </FrontSideContainer>
@@ -73,14 +85,12 @@ const Card = styled.div`
 const FrontSideContainer = styled.div`
   height: 100%;
   width: 100%;
-  background-color: yellow;
   position: absolute;
   backface-visibility: hidden;
 `
 const BackSideContainer = styled.div`
   height: 100%;
   width: 100%;
-  background-color: green;
   position: absolute;
   backface-visibility: hidden;
   transform: rotateY(180deg);
