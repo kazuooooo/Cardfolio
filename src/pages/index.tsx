@@ -14,18 +14,36 @@ import { animated, useSpring } from 'react-spring'
 export default ({ data }) => {
   const localeData = data.file.childIndexJson
   const [{ transform }, set] = useSpring(() => ({ transform: 'rotateY(0deg)' }))
+  const [lastDegree, setLastDegree] = useState(0)
+
   // console.log('degree,: ', degree)
   // const [flipped, setFlipped] = useState(false)
 
-  const bind = useDrag(({
- down, xy, movement: [mx, my], distance 
-}) => {
-    console.log('mx: ', mx)
-    console.log('my: ', my)
-    console.log('down: ', down)
-    console.log('xy: ', xy)
-    console.log('distance: ', distance)
-    set({ transform: `rotateY(${mx}deg)` })
+  // * 指を離して再度タッチした際に角度が元に戻ってしまう
+  // *
+  const calcDegree = (mx) => {
+    const width = window.innerWidth
+    const degree = lastDegree + 360 * (mx / width)
+    return degree
+  }
+
+  // const calcResetDegree = () => {
+  //   console.log('degree: ', degree)
+  //   const cos = Math.cos((lastDegree * Math.PI) / 180)
+  //   const resetDegree = cos > 0 ? 0 : 180
+  //   return degree
+  // }
+  const bind = useDrag(({ down, movement: [mx], last }) => {
+    const degree = calcDegree(mx)
+    if (down) {
+      set({ transform: `rotateY(${degree})` })
+      return degree
+    }
+
+    if (last) {
+      console.log('lastDegree: ', degree)
+      setLastDegree(degree)
+    }
   })
 
   return (
@@ -88,12 +106,6 @@ const Container = styled.div`
   height: 100vh;
   transform: perspective(1000px);
   transform-style: preserve-3d;
-`
-
-const Card = styled.div`
-  height: 100%;
-  width: 100%;
-  position: relative;
 `
 const FrontSideContainer = styled.div`
   height: 100%;
