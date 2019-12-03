@@ -90,11 +90,7 @@
             }
           ]
         },
-        "toolTipData": [
-          "結構得意",
-          "うーむ",
-          "hello!"  
-        ]
+        "toolTipData": ["結構得意", "うーむ", "hello!"]
       },
       {
         "categoryTitle": "フロントエンド",
@@ -107,11 +103,7 @@
             }
           ]
         },
-        "toolTipData": [
-          "結構得意",
-          "うーむ",
-          "hello!"  
-        ]
+        "toolTipData": ["結構得意", "うーむ", "hello!"]
       }
     ]
   }

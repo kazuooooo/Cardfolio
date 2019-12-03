@@ -3,22 +3,24 @@ import React, { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import styled from '@emotion/styled'
-import { css } from '@emotion/core'
 import FrontSide from '../components/frontSide'
 import BackSide from '../components/backSide'
 import '../globalStyle.css'
 import '../reset.css'
 import { useDrag } from 'react-use-gesture'
 import { animated, useSpring } from 'react-spring'
+import useWindowDimentions from '../helpers/useWindowDimensions'
 
 export default ({ data }) => {
+  const rotateDegreeToDragWindowWidth = 270
   const localeData = data.file.childIndexJson
   const [{ transform }, set] = useSpring(() => ({ transform: 'rotateY(0deg)' }))
   const [lastDegree, setLastDegree] = useState(0)
+  const { height, width } = useWindowDimentions()
 
+  // TODO: 回転周りのリファクタリング
   const calcDegree = (mx: number) => {
-    const width = window.innerWidth
-    const degree = lastDegree + 360 * (mx / width)
+    const degree = lastDegree + rotateDegreeToDragWindowWidth * (mx / width)
     return degree
   }
 
@@ -69,7 +71,7 @@ export default ({ data }) => {
             `}
         </script>
       </Helmet>
-      <Container>
+      <Container style={{ height }}>
         <animated.div
           {...bind()}
           style={{
@@ -108,7 +110,6 @@ export const query = graphql`
 `
 
 const Container = styled.div`
-  height: 100vh;
   transform: perspective(1000px);
   transform-style: preserve-3d;
 `
