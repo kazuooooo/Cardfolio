@@ -16,23 +16,25 @@ export default ({ data }) => {
   const [{ transform }, set] = useSpring(() => ({ transform: 'rotateY(0deg)' }))
   const [lastDegree, setLastDegree] = useState(0)
 
-  // console.log('degree,: ', degree)
-  // const [flipped, setFlipped] = useState(false)
-
-  // * 指を離して再度タッチした際に角度が元に戻ってしまう
-  // *
-  const calcDegree = (mx) => {
+  const calcDegree = (mx: number) => {
     const width = window.innerWidth
     const degree = lastDegree + 360 * (mx / width)
     return degree
   }
 
-  // const calcResetDegree = () => {
-  //   console.log('degree: ', degree)
-  //   const cos = Math.cos((lastDegree * Math.PI) / 180)
-  //   const resetDegree = cos > 0 ? 0 : 180
-  //   return degree
-  // }
+  const calcResetDegree = (degree: number) => {
+    // 第一象限 * 第三象限 : 角度を減らす
+    // 第二象限 * 第四象限 : 角度を増やす
+    const sin = Math.sin((degree * Math.PI) / 180)
+    const cos = Math.cos((degree * Math.PI) / 180)
+
+    const divResult = degree / 90
+    if (sin * cos > 0) {
+      return Math.floor(divResult) * 90
+    }
+    return Math.ceil(divResult) * 90
+  }
+
   const bind = useDrag(({ down, movement: [mx], last }) => {
     const degree = calcDegree(mx)
     if (down) {
@@ -41,8 +43,10 @@ export default ({ data }) => {
     }
 
     if (last) {
-      console.log('lastDegree: ', degree)
-      setLastDegree(degree)
+      // Rotate to reset degree when use drag ends.
+      const resetDegree = calcResetDegree(degree)
+      setLastDegree(resetDegree)
+      set({ transform: `rotateY(${resetDegree})` })
     }
   })
 
@@ -73,6 +77,7 @@ export default ({ data }) => {
             transformStyle: 'preserve-3d',
             height: '100%',
             width: '100%',
+            border: '1px solid black',
           }}
         >
           <FrontSideContainer>
