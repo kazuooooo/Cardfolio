@@ -27,17 +27,15 @@ const SelfIntroduction = (props: Props) => {
       <InnerContainer>
         <Title>{menuItemTitle}</Title>
         <img src={Images.profile} css={IconStyle} alt="profile" />
+        <SocialLinks>
+          {socialURLs.map((social: Social) => (
+            <SocialLink href={social.url} target="_blank">
+              <img src={Images[social.name]} alt={social.name} />
+            </SocialLink>
+          ))}
+        </SocialLinks>
         <Description>{description}</Description>
       </InnerContainer>
-      {/* TODO: GraphQL周り勉強して、画像含めたAPI化 */}
-      <SocialLinks>
-        {socialURLs.map((social: Social) => (
-          <SocialLink href={social.url} target="_blank">
-            <img src={Images[social.name]} alt={social.name} />
-            <p>{social.id}</p>
-          </SocialLink>
-        ))}
-      </SocialLinks>
     </Container>
   )
 }
@@ -74,22 +72,19 @@ const IconStyle = css`
   height: 200px;
 `
 const Description = styled.p`
-  margin-top: ${Margins.NotRelated};
+  margin-top: ${Margins.LittleRelated};
 `
 const SocialLinks = styled.section`
-  margin-top: 48px;
-  display: inline-block;
-  float: right;
+  margin-top: ${Margins.LittleRelated};
+  display: flex;
+  width: 120px;
+  justify-content: space-between;
 `
 const SocialLink = styled.a`
   height: 24px;
   display: flex;
   align-items: center;
   font-size: ${FontSize.Supplemnet};
-  margin-top: ${Margins.Related};
-  p {
-    margin-left: ${Margins.StronglyRelated};
-  }
   img {
     height: 100%;
   }

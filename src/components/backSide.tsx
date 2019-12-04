@@ -7,9 +7,7 @@ import CloseIcon from '../images/close.png'
 import MenuItems, { MenuItemKey } from './menuItems'
 
 const BackSide = ({ data }) => {
-  const [currentModal, showModal] = useState<MenuItemKey | null>(
-    null,
-  )
+  const [currentModal, showModal] = useState<MenuItemKey | null>(null)
   const modalStyle = useSpring({
     top: currentModal ? '5%' : '100%',
     config: {
@@ -41,11 +39,12 @@ const BackSide = ({ data }) => {
       <a.div
         style={{
           top: modalStyle.top,
-          height: '100%',
+          height: '95%', // 100% - 5%
           width: '100%',
           position: 'absolute',
           backgroundColor: 'white',
           boxShadow: shadow,
+          overflow: 'scroll',
         }}
       >
         <CloseButton onClick={() => showModal(null)} src={CloseIcon} />
@@ -66,6 +65,7 @@ const Container = styled.div`
 const ItemsContainer = styled.section`
   display: flex;
   flex-direction: column;
+  overflow: scroll;
 `
 const MenuItemLink = styled.a`
   font-size: ${FontSize.SubTitle};
