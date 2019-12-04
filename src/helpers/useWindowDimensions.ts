@@ -11,14 +11,16 @@ function getWindowDimensions() {
 export default function useWindowDimensions() {
   const [windowDimensions, setWindowDimensions] = useState({
     width: 375,
-    height: 812,
+    // 画面のロードが終わるまではssrで描画したこの高さが一瞬表示されるので
+    // ロードが終わるまで待った方が良さそう
+    height: 641,
   })
 
   useEffect(() => {
     function handleResize() {
       setWindowDimensions(getWindowDimensions())
     }
-
+    handleResize()
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
   }, [])
