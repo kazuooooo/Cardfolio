@@ -73,6 +73,7 @@ export default ({ data, location }) => {
             `}
         </script>
       </Helmet>
+      {fromQrCode && <QrCodeBackSide />}
       <Container style={{ height }}>
         <animated.div
           {...bind()}
@@ -84,7 +85,6 @@ export default ({ data, location }) => {
             border: '1px solid black',
           }}
         >
-          {fromQrCode && <QrCodeBackSide />}
           <FrontSideContainer>
             <FrontSide data={localeData.frontSide} />
           </FrontSideContainer>
