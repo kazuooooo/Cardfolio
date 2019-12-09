@@ -24,10 +24,7 @@ export default ({ data, location }) => {
   const { height, width } = useWindowDimentions()
 
   // TODO: 回転周りのリファクタリング
-  const calcDegree = (mx: number) => {
-    const degree = lastDegree + rotateDegreeToDragWindowWidth * (mx / width)
-    return degree
-  }
+  const moveXToDegree = (mx: number) => rotateDegreeToDragWindowWidth * (mx / width)
 
   const calcResetDegree = (degree: number) => {
     // 第一象限 * 第三象限 : 角度を減らす
@@ -43,7 +40,7 @@ export default ({ data, location }) => {
   }
 
   const bind = useDrag(({ down, movement: [mx], last }) => {
-    const degree = calcDegree(mx)
+    const degree = lastDegree + moveXToDegree(mx)
     if (down) {
       set({ transform: `rotateY(${degree})` })
       return degree
