@@ -73,8 +73,8 @@ export default ({ data, location }) => {
             `}
         </script>
       </Helmet>
-      {fromQrCode && <QrCodeBackSide />}
       <Container style={{ height }}>
+        {fromQrCode && <QrCodeBackSide />}
         <animated.div
           {...bind()}
           style={{

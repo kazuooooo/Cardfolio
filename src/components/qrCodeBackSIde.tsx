@@ -12,9 +12,9 @@ const QrCodeBackSide = () => {
 
   return (
     <animated.div style={{ opacity }}>
-      <Container>
+      <QrCodeContainer>
         <QrCode src={QrCodeImage} alt="qr-code" />
-      </Container>
+      </QrCodeContainer>
     </animated.div>
   )
 }
@@ -22,7 +22,7 @@ const QrCodeBackSide = () => {
 const QrCode = styled.img`
   width: 36%;
 `
-const Container = styled.div`
+const QrCodeContainer = styled.div`
   pointer-events: none;
   position: absolute;
   height: 100%;
