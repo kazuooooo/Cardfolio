@@ -13,7 +13,7 @@ const BackSide = ({ data }) => {
     config: {
       mass: 1,
       tension: 500,
-      friction: 70,
+      friction: 30,
     },
   })
   return (
