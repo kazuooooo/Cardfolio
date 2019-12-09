@@ -5,17 +5,22 @@ import { graphql } from 'gatsby'
 import styled from '@emotion/styled'
 import FrontSide from '../components/frontSide'
 import BackSide from '../components/backSide'
+import QrCodeBackSide from '../components/qrCodeBackSide'
 import '../globalStyle.css'
 import '../reset.css'
 import { useDrag } from 'react-use-gesture'
 import { animated, useSpring } from 'react-spring'
 import useWindowDimentions from '../helpers/useWindowDimensions'
+import queryString from 'query-string'
 
-export default ({ data }) => {
+export default ({ data, location }) => {
+  const { fromQrCode, deg } = queryString.parse(location.search)
   const rotateDegreeToDragWindowWidth = 270
   const localeData = data.file.childIndexJson
-  const [{ transform }, set] = useSpring(() => ({ transform: 'rotateY(0deg)' }))
-  const [lastDegree, setLastDegree] = useState(0)
+  const initialDegree = deg ? +deg : 0
+  const [{ transform }, set] = useSpring(() => ({ transform: `rotateY(${initialDegree}deg)` }))
+  const [lastDegree, setLastDegree] = useState(initialDegree)
+
   const { height, width } = useWindowDimentions()
 
   // TODO: 回転周りのリファクタリング
@@ -82,6 +87,7 @@ export default ({ data }) => {
             border: '1px solid black',
           }}
         >
+          {fromQrCode && <QrCodeBackSide />}
           <FrontSideContainer>
             <FrontSide data={localeData.frontSide} />
           </FrontSideContainer>
