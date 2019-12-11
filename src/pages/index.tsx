@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import styled from '@emotion/styled'
 import { useDrag } from 'react-use-gesture'
-import { animated, useSpring } from 'react-spring'
+import { animated, useSpring, useTrail } from 'react-spring'
 import queryString from 'query-string'
 import FrontSide from '../components/frontSide'
 import BackSide from '../components/backSide'
@@ -21,11 +21,18 @@ export default ({ data, location }) => {
 
   const { fromQR } = queryString.parse(location.search)
   const localeData = data.file.childIndexJson
-  const initialDegree = fromQR ? backSideDegree : frontSideDegree
+  const initialDegree = 160
   const [{ transform }, set] = useSpring(() => ({ transform: `rotateY(${initialDegree}deg)` }))
   const [lastDegree, setLastDegree] = useState(initialDegree)
   const [initialAnimated, setInitialAnimated] = useState(!fromQR)
-
+  const [trail, setAnimation, stop] = useTrail(1, () => ({
+    qrOpacity: 1,
+    transform: `rotateY(${initialDegree}deg)`,
+    backSideOpacity: 0,
+  }))
+  const trailProps = trail[0]
+  const qrOpacity = trailProps.opacity
+  const backsideOpacity = 1 - qrOpacity
   const { height, width } = useWindowDimentions()
 
   // TODO: 回転周りのリファクタリング
@@ -34,8 +41,9 @@ export default ({ data, location }) => {
   useEffect(() => {
     if (!initialAnimated) {
       // ロード時のアニメーション
-      setLastDegree(540)
-      set({ transform: `rotateY(${540})` })
+      setLastDegree(180)
+      set({ transform: `rotateY(${180})` })
+      setAnimation({ qrOpacity: 0, backSideOpacity: 1 })
       setInitialAnimated(true)
     }
   })
@@ -102,8 +110,12 @@ export default ({ data, location }) => {
             <FrontSide data={localeData.frontSide} />
           </FrontSideContainer>
           <BackSideContainer>
-            <QrCodeBackSide />
-            {/* <BackSide data={localeData} /> */}
+            <animated.div style={{ opacity: trailProps.qrOpacity }}>
+              <QrCodeBackSide />
+            </animated.div>
+            <animated.div style={{ opacity: trailProps.backSideOpacity, height: '100%', width: '100%' }}>
+              <BackSide data={localeData} />
+            </animated.div>
           </BackSideContainer>
         </animated.div>
       </Container>
