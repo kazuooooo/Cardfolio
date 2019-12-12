@@ -10,9 +10,9 @@ import BackSide from '../components/backSide'
 import QrCodeBackSide from '../components/qrCodeBackSide'
 import useWindowDimentions from '../helpers/useWindowDimensions'
 import useCardRotation from '../helpers/useCardRotation'
-
 import '../globalStyle.css'
 import '../reset.css'
+import { shadow } from '../style'
 
 export default ({ data, location }) => {
   // constatns
@@ -28,27 +28,6 @@ export default ({ data, location }) => {
       from: { qrCodeOpacity: 1, backSideOpacity: 0 },
     },
   )
-  // const [initialAnimated, setInitialAnimated] = useState(!fromQR)
-  // const [trail, setAnimation, stop] = useTrail(1, () => ({
-  //   qrOpacity: 1,
-  //   transform: `rotateY(${initialDegree}deg)`,
-  //   backSideOpacity: 0,
-  // }))
-  // const trailProps = trail[0]
-  // const qrOpacity = trailProps.opacity
-  // const backsideOpacity = 1 - qrOpacity
-
-  // TODO: 回転周りのリファクタリング
-
-  // useEffect(() => {
-  //   if (!initialAnimated) {
-  //     // ロード時のアニメーション
-  //     setLastDegree(180)
-  //     set({ transform: `rotateY(${180})` })
-  //     setAnimation({ qrOpacity: 0, backSideOpacity: 1 })
-  //     setInitialAnimated(true)
-  //   }
-  // })
 
 
   return (
@@ -70,7 +49,7 @@ export default ({ data, location }) => {
             `}
         </script>
       </Helmet>
-      <Container style={{ height }}>
+      <Container style={{ height, padding: '8px' }}>
         <animated.div
           {...bind()}
           style={{
@@ -78,7 +57,7 @@ export default ({ data, location }) => {
             transformStyle: 'preserve-3d',
             height: '100%',
             width: '100%',
-            border: '1px solid black',
+            boxShadow: shadow,
           }}
         >
           <FrontSideContainer>
