@@ -7,7 +7,7 @@ import CloseIcon from '../images/close.png'
 import MenuItems, { MenuItemKey } from './menuItems'
 
 const BackSide = ({ data }) => {
-  const [currentModal, showModal] = useState<MenuItemKey | null>(null)
+  const [currentModal, setModal] = useState<MenuItemKey | null>(null)
   const modalStyle = useSpring({
     top: currentModal ? '5%' : '100%',
     config: {
@@ -16,6 +16,11 @@ const BackSide = ({ data }) => {
       friction: 30,
     },
   })
+
+  const showModal = (event: MouseEvent, modal: MenuItemKey | null) => {
+    event.stopPropagation()
+    setModal(modal)
+  }
   return (
     <Container>
       {// HACK: To hide modal under container disable scroll.
@@ -31,7 +36,7 @@ const BackSide = ({ data }) => {
 }
       <ItemsContainer>
         {Object.values(MenuItemKey).map((val) => (
-          <MenuItemLink onClick={() => showModal(val)}>
+          <MenuItemLink onClick={(event) => showModal(event, val)}>
             {data[val].menuItemTitle}
           </MenuItemLink>
         ))}
@@ -46,8 +51,9 @@ const BackSide = ({ data }) => {
           boxShadow: shadow,
           overflow: 'scroll',
         }}
+        onClick={(event) => event.stopPropagation()}
       >
-        <CloseButton onClick={() => showModal(null)} src={CloseIcon} />
+        <CloseButton onClick={(event) => showModal(event, null)} src={CloseIcon} />
         {currentModal && MenuItems[currentModal]({ data: data[currentModal] })}
       </a.div>
     </Container>
