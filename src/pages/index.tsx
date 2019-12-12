@@ -20,7 +20,10 @@ export default ({ data, location }) => {
   const { fromQR } = queryString.parse(location.search)
   const localeData = data.file.childIndexJson
   const { height } = useWindowDimentions()
-  const { transform, bind } = useCardRotation(fromQR)
+  const {
+    transform, bind, tapAnimation,
+  } = useCardRotation(fromQR)
+
   const { qrCodeOpacity, backSideOpacity } = useSpring(
     {
       qrCodeOpacity: 0,
@@ -49,7 +52,10 @@ export default ({ data, location }) => {
             `}
         </script>
       </Helmet>
-      <Container style={{ height, padding: '8px' }}>
+      <Container
+        style={{ height, padding: '8px' }}
+        onClick={tapAnimation}
+      >
         <animated.div
           {...bind()}
           style={{

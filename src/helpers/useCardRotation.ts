@@ -17,9 +17,12 @@ export default function useCardRotation(fromQR: Boolean) {
   const [lastDegree, setLastDegree] = useState(initialDegree)
 
 
+  const setDegree = (degree: number) => {
+    setLastDegree(degree)
+    set({ transform: `rotateY(${degree})` })
+  }
   // Convert drag distance to rotate degree
   const moveXToDegree = (moveX: number) => rotateDegreeToDragWindowWidth * (moveX / width)
-
   const calcHorizontalDegreeToReturn = (degree: number) => {
     // Degree is
     //  First or third quadrant: minus degree to horizontal
@@ -54,10 +57,22 @@ export default function useCardRotation(fromQR: Boolean) {
     if (last) {
       // Rotate to reset degree when use drag ends.
       const horizontalDegree = calcHorizontalDegreeToReturn(degree)
-      setLastDegree(horizontalDegree)
-      set({ transform: `rotateY(${horizontalDegree})` })
+      setDegree(horizontalDegree)
     }
   })
 
-  return { transform, bind }
+  const tapAnimation = (clickEvent) => {
+    const centerPosition = width / 2
+    if (clickEvent.nativeEvent.x < centerPosition) {
+      setDegree(lastDegree - 15)
+      setTimeout(() => setDegree(lastDegree), 300)
+    } else {
+      setDegree(lastDegree + 15)
+      setTimeout(() => setDegree(lastDegree), 300)
+    }
+  }
+
+  return {
+    transform, bind, tapAnimation,
+  }
 }
