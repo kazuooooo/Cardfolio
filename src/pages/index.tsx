@@ -13,6 +13,7 @@ import useCardRotation from '../helpers/useCardRotation'
 import '../globalStyle.css'
 import '../reset.css'
 import { shadow } from '../style'
+import Images from '../images'
 
 export default ({ data, location }) => {
   // constatns
@@ -31,8 +32,6 @@ export default ({ data, location }) => {
       from: { qrCodeOpacity: 1, backSideOpacity: 0 },
     },
   )
-
-
   return (
     <>
       <Helmet>
@@ -107,6 +106,7 @@ const FrontSideContainer = styled.div`
   width: 100%;
   position: absolute;
   backface-visibility: hidden;
+  background-image: url(${Images.paper});
 `
 const BackSideContainer = styled.div`
   height: 100%;
@@ -114,4 +114,5 @@ const BackSideContainer = styled.div`
   position: absolute;
   backface-visibility: hidden;
   transform: rotateY(180deg);
+  background-image: url(${Images.paper});
 `
