@@ -3,78 +3,46 @@ import React, { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import styled from '@emotion/styled'
-import { useDrag } from 'react-use-gesture'
-import { animated, useSpring, useTrail } from 'react-spring'
+import { animated, useTrail } from 'react-spring'
 import queryString from 'query-string'
 import FrontSide from '../components/frontSide'
 import BackSide from '../components/backSide'
 import QrCodeBackSide from '../components/qrCodeBackSide'
 import useWindowDimentions from '../helpers/useWindowDimensions'
+import useCardRotation from '../helpers/useCardRotation'
+
 import '../globalStyle.css'
 import '../reset.css'
 
 export default ({ data, location }) => {
   // constatns
-  const frontSideDegree = 0
-  const backSideDegree = 180
-  const rotateDegreeToDragWindowWidth = 270
 
   const { fromQR } = queryString.parse(location.search)
   const localeData = data.file.childIndexJson
-  const initialDegree = 160
-  const [{ transform }, set] = useSpring(() => ({ transform: `rotateY(${initialDegree}deg)` }))
-  const [lastDegree, setLastDegree] = useState(initialDegree)
-  const [initialAnimated, setInitialAnimated] = useState(!fromQR)
-  const [trail, setAnimation, stop] = useTrail(1, () => ({
-    qrOpacity: 1,
-    transform: `rotateY(${initialDegree}deg)`,
-    backSideOpacity: 0,
-  }))
-  const trailProps = trail[0]
-  const qrOpacity = trailProps.opacity
-  const backsideOpacity = 1 - qrOpacity
-  const { height, width } = useWindowDimentions()
+  const { height } = useWindowDimentions()
+  const { transform, bind } = useCardRotation(fromQR)
+  // const [initialAnimated, setInitialAnimated] = useState(!fromQR)
+  // const [trail, setAnimation, stop] = useTrail(1, () => ({
+  //   qrOpacity: 1,
+  //   transform: `rotateY(${initialDegree}deg)`,
+  //   backSideOpacity: 0,
+  // }))
+  // const trailProps = trail[0]
+  // const qrOpacity = trailProps.opacity
+  // const backsideOpacity = 1 - qrOpacity
 
   // TODO: 回転周りのリファクタリング
-  const moveXToDegree = (mx: number) => rotateDegreeToDragWindowWidth * (mx / width)
 
-  useEffect(() => {
-    if (!initialAnimated) {
-      // ロード時のアニメーション
-      setLastDegree(180)
-      set({ transform: `rotateY(${180})` })
-      setAnimation({ qrOpacity: 0, backSideOpacity: 1 })
-      setInitialAnimated(true)
-    }
-  })
+  // useEffect(() => {
+  //   if (!initialAnimated) {
+  //     // ロード時のアニメーション
+  //     setLastDegree(180)
+  //     set({ transform: `rotateY(${180})` })
+  //     setAnimation({ qrOpacity: 0, backSideOpacity: 1 })
+  //     setInitialAnimated(true)
+  //   }
+  // })
 
-  const calcResetDegree = (degree: number) => {
-    // 第一象限 * 第三象限 : 角度を減らす
-    // 第二象限 * 第四象限 : 角度を増やす
-    const sin = Math.sin((degree * Math.PI) / 180)
-    const cos = Math.cos((degree * Math.PI) / 180)
-
-    const divResult = degree / 90
-    if (sin * cos > 0) {
-      return Math.floor(divResult) * 90
-    }
-    return Math.ceil(divResult) * 90
-  }
-
-  const bind = useDrag(({ down, movement: [mx], last }) => {
-    const degree = lastDegree + moveXToDegree(mx)
-    if (down) {
-      set({ transform: `rotateY(${degree})` })
-      return degree
-    }
-
-    if (last) {
-      // Rotate to reset degree when use drag ends.
-      const resetDegree = calcResetDegree(degree)
-      setLastDegree(resetDegree)
-      set({ transform: `rotateY(${resetDegree})` })
-    }
-  })
 
   return (
     <>
@@ -110,12 +78,8 @@ export default ({ data, location }) => {
             <FrontSide data={localeData.frontSide} />
           </FrontSideContainer>
           <BackSideContainer>
-            <animated.div style={{ opacity: trailProps.qrOpacity }}>
-              <QrCodeBackSide />
-            </animated.div>
-            <animated.div style={{ opacity: trailProps.backSideOpacity, height: '100%', width: '100%' }}>
-              <BackSide data={localeData} />
-            </animated.div>
+            <QrCodeBackSide />
+            <BackSide data={localeData} />
           </BackSideContainer>
         </animated.div>
       </Container>
