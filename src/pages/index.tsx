@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import { graphql } from 'gatsby'
 import styled from '@emotion/styled'
-import { animated, useTrail } from 'react-spring'
+import { animated, useSpring } from 'react-spring'
 import queryString from 'query-string'
 import FrontSide from '../components/frontSide'
 import BackSide from '../components/backSide'
@@ -21,6 +21,13 @@ export default ({ data, location }) => {
   const localeData = data.file.childIndexJson
   const { height } = useWindowDimentions()
   const { transform, bind } = useCardRotation(fromQR)
+  const { qrCodeOpacity, backSideOpacity } = useSpring(
+    {
+      qrCodeOpacity: 0,
+      backSideOpacity: 1,
+      from: { qrCodeOpacity: 1, backSideOpacity: 0 },
+    },
+  )
   // const [initialAnimated, setInitialAnimated] = useState(!fromQR)
   // const [trail, setAnimation, stop] = useTrail(1, () => ({
   //   qrOpacity: 1,
@@ -78,8 +85,12 @@ export default ({ data, location }) => {
             <FrontSide data={localeData.frontSide} />
           </FrontSideContainer>
           <BackSideContainer>
-            <QrCodeBackSide />
-            <BackSide data={localeData} />
+            <animated.div style={{ opacity: qrCodeOpacity }}>
+              <QrCodeBackSide />
+            </animated.div>
+            <animated.div style={{ opacity: backSideOpacity, height: '100%' }}>
+              <BackSide data={localeData} />
+            </animated.div>
           </BackSideContainer>
         </animated.div>
       </Container>
