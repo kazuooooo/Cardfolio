@@ -65,6 +65,7 @@ const Title = styled.h1`
 
 const WorkItem = styled.a`
   display: inline-block;
+  width: 100%;
   img {
     width: 100%;
     height: 165px;
