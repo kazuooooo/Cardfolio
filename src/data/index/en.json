@@ -106,5 +106,14 @@
         "toolTipData": ["aaa", "bbb", "hello!"]
       }
     ]
+  },
+  "siteMetaData": {
+    "title": "title",
+    "description": "description",
+    "type": "website",
+    "image": "https://forvarioushosting.s3-ap-northeast-1.amazonaws.com/ogp.png",
+    "twitter": {
+      "site": "@kazuooooo"
+    }
   }
 }

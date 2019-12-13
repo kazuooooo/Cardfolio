@@ -42,7 +42,7 @@
   },
   "contact": {
     "menuItemTitle": "コンタクト",
-    "description": "ご連絡、お仕事のご依頼は以下よりお願いします。言語、フレームワーク問わずウェブアプリケーション〜ネイティブアプリケーション開発まで、なんでもご相談ください。特にデザインも含めた小規模開発であれば、個人で請け負いますので、デザイナーを雇うよりも安く開発させていただきます。",
+    "descriaption": "ご連絡、お仕事のご依頼は以下よりお願いします。言語、フレームワーク問わずウェブアプリケーション〜ネイティブアプリケーション開発まで、なんでもご相談ください。特にデザインも含めた小規模開発であれば、個人で請け負いますので、デザイナーを雇うよりも安く開発させていただきます。",
     "contactItems": [
       {
         "type": "mail",
@@ -106,5 +106,14 @@
         "toolTipData": ["結構得意", "うーむ", "hello!"]
       }
     ]
+  },
+  "siteMetaData": {
+    "title": "title",
+    "description": "description",
+    "type": "website",
+    "image": "https://forvarioushosting.s3-ap-northeast-1.amazonaws.com/ogp.png",
+    "twitter": {
+      "site": "@kazuooooo"
+    }
   }
 }

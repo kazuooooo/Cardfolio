@@ -46,7 +46,7 @@ const BackSide = ({ data }) => {
 }
       <ItemsContainer>
         {Object.values(MenuItemKey).map((val) => (
-          <MenuItemLink onClick={(event) => onClickMenuItem(event, val)}>
+          <MenuItemLink key={val} onClick={(event) => onClickMenuItem(event, val)}>
             {data[val].menuItemTitle}
           </MenuItemLink>
         ))}
