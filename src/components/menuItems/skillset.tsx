@@ -3,7 +3,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { HorizontalBar } from 'react-chartjs-2'
 import { graphql } from 'gatsby'
-import { FontSize, Margins, shadow } from '../../style'
+import { Margins } from '../../style'
 
 interface ISkillData {
   categoryTitle: string
