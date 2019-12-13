@@ -5,6 +5,7 @@ import { Global, css } from '@emotion/core'
 import { FontSize, shadow, Margins } from '../style'
 import CloseIcon from '../images/close.png'
 import MenuItems, { MenuItemKey } from './menuItems'
+import Images from '../images'
 
 const BackSide = ({ data }) => {
   const [currentModal, setModal] = useState<MenuItemKey | null>(null)
@@ -60,6 +61,7 @@ const BackSide = ({ data }) => {
           backgroundColor: 'white',
           boxShadow: shadow,
           overflow: 'scroll',
+          backgroundImage: `url(${Images.paper})`,
         }}
         onClick={(event) => event.stopPropagation()}
       >
