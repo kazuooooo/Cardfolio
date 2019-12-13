@@ -52,7 +52,13 @@ export default ({ data, location }) => {
         </script>
       </Helmet>
       <Container
-        style={{ height, padding: '8px' }}
+        style={{
+          height,
+          padding: '8px',
+          maxWidth: '375px',
+          maxHeight: '812px',
+          margin: 'auto',
+        }}
         onClick={tapAnimation}
       >
         <animated.div

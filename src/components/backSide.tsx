@@ -90,6 +90,14 @@ const ItemsContainer = styled.section`
 const MenuItemLink = styled.a`
   font-size: ${FontSize.SubTitle};
   margin-top: ${Margins.LittleRelated};
+  /*
+  Prevent text selection to bother rotation on PC
+  */
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 `
 
 const CloseButton = styled.img`
