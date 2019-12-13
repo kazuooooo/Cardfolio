@@ -8,6 +8,7 @@ import MenuItems, { MenuItemKey } from './menuItems'
 
 const BackSide = ({ data }) => {
   const [currentModal, setModal] = useState<MenuItemKey | null>(null)
+  const [showModal, setShowModal] = useState(false)
   const modalStyle = useSpring({
     top: currentModal ? '5%' : '100%',
     config: {
@@ -17,9 +18,17 @@ const BackSide = ({ data }) => {
     },
   })
 
-  const showModal = (event: MouseEvent, modal: MenuItemKey | null) => {
+  const onClickMenuItem = (event: MouseEvent, modal: MenuItemKey | null) => {
     event.stopPropagation()
+    setShowModal(true)
     setModal(modal)
+  }
+
+  const onClickColseButton = (event: MouseEvent) => {
+    event.stopPropagation()
+    setModal(null)
+    // Wait until animation ends
+    setTimeout(() => setShowModal(false), 500)
   }
   return (
     <Container>
@@ -36,11 +45,12 @@ const BackSide = ({ data }) => {
 }
       <ItemsContainer>
         {Object.values(MenuItemKey).map((val) => (
-          <MenuItemLink onClick={(event) => showModal(event, val)}>
+          <MenuItemLink onClick={(event) => onClickMenuItem(event, val)}>
             {data[val].menuItemTitle}
           </MenuItemLink>
         ))}
       </ItemsContainer>
+      {showModal && (
       <a.div
         style={{
           top: modalStyle.top,
@@ -53,9 +63,11 @@ const BackSide = ({ data }) => {
         }}
         onClick={(event) => event.stopPropagation()}
       >
-        <CloseButton onClick={(event) => showModal(event, null)} src={CloseIcon} />
+        <CloseButton onClick={(event) => onClickColseButton(event)} src={CloseIcon} />
         {currentModal && MenuItems[currentModal]({ data: data[currentModal] })}
       </a.div>
+      )}
+
     </Container>
   )
 }
