@@ -13,7 +13,8 @@ export default function useWindowDimensions() {
     width: 375,
     // 画面のロードが終わるまではssrで描画したこの高さが一瞬表示されるので
     // ロードが終わるまで待った方が良さそう
-    height: 641,
+    // windowはuseEffectの中でしか使えない
+    height: 812,
   })
 
   useEffect(() => {

@@ -26,7 +26,7 @@ const SkillSet = (props: Props) => {
     <Container>
       <Title>{menuItemTitle}</Title>
       {skillDatum.map(({ categoryTitle, data, toolTipData }) => (
-        <>
+        <div key={categoryTitle}>
           <CategoryTitle>{categoryTitle}</CategoryTitle>
           {/* <HorizontalBar
             data={data}
@@ -56,7 +56,7 @@ const SkillSet = (props: Props) => {
               },
             }}
           /> */}
-        </>
+        </div>
       ))}
     </Container>
   )

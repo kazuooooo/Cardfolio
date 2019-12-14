@@ -29,7 +29,7 @@ const Career = (props: Props) => {
       <TimeLine />
       <CareerItemList>
         {careerItems.map((career) => (
-          <CareerItem>
+          <CareerItem key={career.title}>
             <CareerItemCircle />
             <CareerItemYear>{career.year}</CareerItemYear>
             <CareerItemTextBox>

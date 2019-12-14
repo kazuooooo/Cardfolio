@@ -25,7 +25,7 @@ const Works = (props: Props) => {
     <Container>
       <Title>{menuItemTitle}</Title>
       {workItems.map((workItem: IWorkItem) => (
-        <WorkItem href={workItem.url}>
+        <WorkItem key={workItem.title} href={workItem.url}>
           <img src={workItem.ogpURL} alt={workItem.title} />
           <div>
             <h3>{workItem.title}</h3>

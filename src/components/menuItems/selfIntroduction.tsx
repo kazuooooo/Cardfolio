@@ -29,7 +29,7 @@ const SelfIntroduction = (props: Props) => {
         <img src={Images.profile} css={IconStyle} alt="profile" />
         <SocialLinks>
           {socialURLs.map((social: Social) => (
-            <SocialLink href={social.url} target="_blank">
+            <SocialLink key={social.name} href={social.url} target="_blank">
               <img src={Images[social.name]} alt={social.name} />
             </SocialLink>
           ))}

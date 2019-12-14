@@ -28,7 +28,7 @@ const Works = (props: Props) => {
       <Title>{menuItemTitle}</Title>
       <Description>{description}</Description>
       {contactItems.map((contact) => (
-        <ContactLink href={contact.href} target="_blank">
+        <ContactLink key={contact.type} href={contact.href} target="_blank">
           <img src={Images[contact.type]} />
           <p>{contact.label}</p>
         </ContactLink>
