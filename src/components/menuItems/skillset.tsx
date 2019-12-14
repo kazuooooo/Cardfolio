@@ -1,7 +1,7 @@
 /* eslint-disable no-use-before-define */
 import React from 'react'
 import styled from '@emotion/styled'
-import { HorizontalBar } from 'react-chartjs-2'
+// import { HorizontalBar } from 'react-chartjs-2'
 import { graphql } from 'gatsby'
 import { Margins } from '../../style'
 
@@ -28,7 +28,7 @@ const SkillSet = (props: Props) => {
       {skillDatum.map(({ categoryTitle, data, toolTipData }) => (
         <>
           <CategoryTitle>{categoryTitle}</CategoryTitle>
-          <HorizontalBar
+          {/* <HorizontalBar
             data={data}
             options={{
               legend: {
@@ -55,7 +55,7 @@ const SkillSet = (props: Props) => {
                 },
               },
             }}
-          />
+          /> */}
         </>
       ))}
     </Container>
