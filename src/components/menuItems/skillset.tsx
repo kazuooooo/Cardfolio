@@ -3,11 +3,12 @@ import React from 'react'
 import styled from '@emotion/styled'
 // import { HorizontalBar } from 'react-chartjs-2'
 import { graphql } from 'gatsby'
+import { Chart } from 'react-google-charts'
 import { Margins } from '../../style'
 
 interface ISkillData {
   categoryTitle: string
-  data: any
+  dataSets: any[]
   toolTipData: string[]
 }
 
@@ -25,38 +26,45 @@ const SkillSet = (props: Props) => {
   return (
     <Container>
       <Title>{menuItemTitle}</Title>
-      {skillDatum.map(({ categoryTitle, data, toolTipData }) => (
-        <div key={categoryTitle}>
+      {skillDatum.map(({ categoryTitle, dataSets }) => (
+        <ChartContainer key={categoryTitle}>
           <CategoryTitle>{categoryTitle}</CategoryTitle>
-          {/* <HorizontalBar
-            data={data}
+          <Chart
+            width="500px"
+            height="300px"
+            chartType="BarChart"
+            loader={<div>Loading Chart</div>}
+            data={[
+              [
+                'Element',
+                'Lv',
+                { role: 'style' },
+                { role: 'annotation' },
+              ],
+              ...dataSets.map(({
+                label, level, barColor, annotation,
+              }) => [label, level, barColor, annotation]),
+            ]}
             options={{
-              legend: {
-                display: false,
+              backgroundColor: { fill: 'transparent', opacity: 0.1 },
+              width: 320,
+              height: 300,
+              bar: { groupWidth: '70%' },
+              legend: { position: 'none' },
+              chartArea: {
+                height: '80%',
+                width: '70%',
               },
-              scales: {
-                xAxes: [
-                  {
-                    display: true,
-                    ticks: {
-                      suggestedMin: 0,
-                      suggestedMax: 5,
-                      stepSize: 1,
-                      callback: (value, index, values) => `Lv${value}`,
-                    },
-                  },
-                ],
-              },
-              tooltips: {
-                callbacks: {
-                  label(tooltipItem, data) {
-                    return toolTipData[+tooltipItem.index]
-                  },
+              hAxis: {
+                maxValue: 5,
+                format: 'decimal',
+                gridlines: {
+                  count: 5,
                 },
               },
             }}
-          /> */}
-        </div>
+          />
+        </ChartContainer>
       ))}
     </Container>
   )
@@ -68,14 +76,11 @@ export const dataQuery = graphql`
       menuItemTitle
       skillDatum {
         categoryTitle
-        data {
-          labels
-          datasets {
-            backgroundColor
-            data
-          }
+        dataSets {
+          label
+          level
+          barColor
         }
-        toolTipData
       }
     }
   }
@@ -87,6 +92,8 @@ const Container = styled.div`
   justify-content: center;
   padding: 24px;
 `
+
+const ChartContainer = styled.div``
 
 const Title = styled.h1`
   text-align: center;

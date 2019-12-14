@@ -81,29 +81,44 @@
     "skillDatum": [
       {
         "categoryTitle": "バックエンド",
-        "data": {
-          "labels": ["Ruby", "node", "Python"],
-          "datasets": [
-            {
-              "backgroundColor": ["#F8545B", "#54B3F8", "#34D97A"],
-              "data": [5, 2, 3]
-            }
-          ]
-        },
-        "toolTipData": ["結構得意", "うーむ", "hello!"]
+        "dataSets": [
+          {
+            "label": "Ruby",
+            "level": 5,
+            "barColor": "#F8545B",
+            "annotation": "一番長くて得意"
+          },
+          {
+            "label": "NodeJS",
+            "level": 2,
+            "barColor": "#54B3F8"
+          },
+          {
+            "label": "Python",
+            "level": 3,
+            "barColor": "#34D97A"
+          }
+        ]
       },
       {
         "categoryTitle": "フロントエンド",
-        "data": {
-          "labels": ["React", "Vue"],
-          "datasets": [
-            {
-              "backgroundColor": ["#F8545B", "#54B3F8"],
-              "data": [4, 2]
-            }
-          ]
-        },
-        "toolTipData": ["結構得意", "うーむ", "hello!"]
+        "dataSets": [
+          {
+            "label": "React",
+            "level": 1,
+            "barColor": "#b87333"
+          },
+          {
+            "label": "Vue",
+            "level": 2,
+            "barColor": "#b87333"
+          },
+          {
+            "label": "Python",
+            "level": 3,
+            "barColor": "#b87333"
+          }
+        ]
       }
     ]
   },

@@ -1,7 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import MenuItems from '.'
-import data from '../../data/components.json'
+import data from '../../data/index/ja.json'
 
 storiesOf('MenuItems/SelfIntroduction', module)
   .add('default', () => (

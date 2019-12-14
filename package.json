@@ -21,6 +21,7 @@
     "query-string": "^6.9.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "react-google-charts": "^3.0.15",
     "react-helmet": "^5.2.1",
     "react-spring": "^8.0.27",
     "react-use-gesture": "^6.0.14"
