@@ -30,7 +30,7 @@ const SkillSet = (props: Props) => {
         <ChartContainer key={categoryTitle}>
           <CategoryTitle>{categoryTitle}</CategoryTitle>
           <Chart
-            width="500px"
+            width="320px"
             height="300px"
             chartType="BarChart"
             loader={<div>Loading Chart</div>}
