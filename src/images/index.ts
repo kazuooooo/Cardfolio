@@ -8,7 +8,7 @@ import Medium from './medium.png'
 import Mail from './mail.png'
 import Messenger from './messenger.png'
 import Profile from './profile.png'
-import Paper from './paper.png'
+import Paper from './mini-paper.png'
 
 enum Images {
   github = Github,
