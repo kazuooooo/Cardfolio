@@ -20,7 +20,7 @@ const QrCodeContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  bacground-color: white;
+  background-color: white;
 `
 
 export default QrCodeBackSide
