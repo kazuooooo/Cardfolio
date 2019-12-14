@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { graphql } from 'gatsby'
 import styled from '@emotion/styled'
 import { animated, useSpring, config } from 'react-spring'
@@ -16,10 +16,11 @@ import { shadow } from '../style'
 import Images from '../images'
 
 export default ({ data, location }) => {
-  // constatns
+  const [hideByBox, setHideByBox] = useState(true)
   const { fromQR } = queryString.parse(location.search)
   const localeData = data.file.childIndexJson
   const { height } = useWindowDimentions()
+
   const {
     transform, bind, tapAnimation,
   } = useCardRotation(fromQR)
@@ -30,8 +31,10 @@ export default ({ data, location }) => {
       backSideOpacity: 1,
       from: { qrCodeOpacity: 1, backSideOpacity: 0 },
       config: config.molasses,
+      onRest: () => setHideByBox(false),
     },
   )
+
   return (
     <>
       <Header data={localeData.siteMetaData} />
@@ -45,6 +48,18 @@ export default ({ data, location }) => {
         }}
         onClick={tapAnimation}
       >
+        {hideByBox && (
+        <animated.div style={{
+          position: 'absolute',
+          opacity: 1,
+          height: '100%',
+          width: '100%',
+          transform: 'translateZ(1px)',
+          backgroundColor: 'white',
+          opacity: qrCodeOpacity,
+        }}
+        />
+        )}
         <animated.div
           {...bind()}
           style={{
