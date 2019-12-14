@@ -2,7 +2,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import styled from '@emotion/styled'
-import { animated, useSpring } from 'react-spring'
+import { animated, useSpring, config } from 'react-spring'
 import queryString from 'query-string'
 import Header from '../components/header'
 import FrontSide from '../components/frontSide'
@@ -29,6 +29,7 @@ export default ({ data, location }) => {
       qrCodeOpacity: 0,
       backSideOpacity: 1,
       from: { qrCodeOpacity: 1, backSideOpacity: 0 },
+      config: config.molasses,
     },
   )
   return (
