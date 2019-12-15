@@ -1,0 +1,134 @@
+{
+  "frontSide": {
+    "jobTitle": "Engineer",
+    "name": "Kazuya Matsumoto"
+  },
+  "selfIntroduction": {
+    "menuItemTitle": "About me",
+    "description": "Hi, I'm Kazuya Matsumoto. Full cycle developer as freelance nice to meet you!",
+    "socialURLs": [
+      {
+        "name": "github",
+        "id": "kazuooooo",
+        "url": "https://github.com/kazuooooo"
+      },
+      {
+        "name": "facebook",
+        "id": "matsumotokazuya7",
+        "url": "https://www.facebook.com/matsumoto.kazuya.52"
+      },
+      {
+        "name": "medium",
+        "id": "kazuooooo",
+        "url": "https://medium.com/@matsumotokazuya"
+      },
+      {
+        "name": "qiita",
+        "id": "matsumotokazuya",
+        "url": "https://qiita.com/kazuooooo"
+      }
+    ]
+  },
+  "works": {
+    "menuItemTitle": "works",
+    "workItems": [
+      {
+        "title": "EdisonSticker Shop",
+        "description": "Sticker Sticke",
+        "url": "https://edison.base.shop/",
+        "ogpURL": "https://base-ec2if.akamaized.net/w=1200,h=1200,a=3,q=90,u=1,b=00000000/images/user/logo/63c63106ffa765e036cbec3671d1c818.png"
+      }
+    ]
+  },
+  "contact": {
+    "menuItemTitle": "Contact",
+    "description": "Please contact me from below links",
+    "contactItems": [
+      {
+        "type": "mail",
+        "label": "matsumotokazuya7@gmail.com",
+        "href": "mailto: matsumotokazuya7@gmail.com"
+      },
+      {
+        "type": "messenger",
+        "label": "https://m.me/matsumoto.kazuya.52",
+        "href": "https://m.me/matsumoto.kazuya.52"
+      }
+    ]
+  },
+  "career": {
+    "menuItemTitle": "Career",
+    "careerItems": [
+      {
+        "year": 2014,
+        "title": "hogejob",
+        "description": "longlongdescriptionaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      {
+        "year": 2014,
+        "title": "hogejob",
+        "description": "longlongdescription"
+      },
+      {
+        "year": 2014,
+        "title": "hogejob",
+        "description": "longlongdescription"
+      }
+    ]
+  },
+  "skillSet": {
+    "menuItemTitle": "Skillset",
+    "skillDatum": [
+      {
+        "categoryTitle": "バックエンド",
+        "dataSets": [
+          {
+            "label": "Ruby",
+            "level": 5,
+            "barColor": "#F8545B",
+            "annotation": "一番長くて得意"
+          },
+          {
+            "label": "NodeJS",
+            "level": 2,
+            "barColor": "#54B3F8"
+          },
+          {
+            "label": "Python",
+            "level": 3,
+            "barColor": "#34D97A"
+          }
+        ]
+      },
+      {
+        "categoryTitle": "フロントエンド",
+        "dataSets": [
+          {
+            "label": "React",
+            "level": 1,
+            "barColor": "#b87333"
+          },
+          {
+            "label": "Vue",
+            "level": 2,
+            "barColor": "#b87333"
+          },
+          {
+            "label": "Python",
+            "level": 3,
+            "barColor": "#b87333"
+          }
+        ]
+      }
+    ]
+  },
+  "siteMetaData": {
+    "title": "title",
+    "description": "description",
+    "type": "website",
+    "image": "https://forvarioushosting.s3-ap-northeast-1.amazonaws.com/ogp.png",
+    "twitter": {
+      "site": "@kazuooooo"
+    }
+  }
+}
