@@ -2,8 +2,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { graphql } from 'gatsby'
-import { FontSize, Margins, shadow } from '../../style'
-import Images from '../../images'
+import { Margins } from '../../style'
 
 interface ICareerItem {
   year: number
@@ -98,7 +97,6 @@ const CareerItemTextBox = styled.div`
   margin-left: ${Margins.LittleRelated};
   max-width: 200px;
   p {
-    margin-top: ${Margins.Related};
     overflow-wrap: break-word;
     line-height: 1.5em;
   }

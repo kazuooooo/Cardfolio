@@ -74,7 +74,7 @@ const ContactLink = styled.a`
   font-size: ${FontSize.Supplemnet};
   margin-top: ${Margins.Related};
   p {
-    margin-left: ${Margins.StronglyRelated};
+    margin-left: 6px;
   }
   img {
     width: 24px;
