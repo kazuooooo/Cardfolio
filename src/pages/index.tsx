@@ -57,6 +57,7 @@ export default ({ data, location }) => {
           transform: 'translateZ(1px)',
           backgroundColor: 'white',
           opacity: qrCodeOpacity,
+          pointerEvents: 'none',
         }}
         />
         )}
