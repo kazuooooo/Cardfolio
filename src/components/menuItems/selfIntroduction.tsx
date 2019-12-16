@@ -59,7 +59,6 @@ export const dataQuery = graphql`
       description
       socialURLs {
         name
-        id
         url
       }
     }

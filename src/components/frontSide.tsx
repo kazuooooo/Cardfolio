@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import { graphql } from 'gatsby'
-import { FontSize } from '../style'
+import { FontSize, Margins } from '../style'
 
 export interface Props {
   data: {
@@ -42,7 +42,6 @@ const Container = styled.div`
 `
 
 const Name = styled.div`
-  margin-top: 20px;
   font-size: 36px;
 `
 const JobTitle = styled.div`

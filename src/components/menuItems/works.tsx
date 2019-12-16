@@ -64,6 +64,9 @@ const Title = styled.h1`
 `
 
 const WorkItem = styled.a`
+  :not(:first-of-type) {
+    margin-top: ${Margins.NotRelated};
+  }
   display: inline-block;
   width: 100%;
   img {

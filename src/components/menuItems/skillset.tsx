@@ -56,6 +56,7 @@ const SkillSet = (props: Props) => {
                 width: '70%',
               },
               hAxis: {
+                minValue: 0,
                 maxValue: 5,
                 format: 'decimal',
                 gridlines: {
@@ -80,6 +81,7 @@ export const dataQuery = graphql`
           label
           level
           barColor
+          annotation
         }
       }
     }
