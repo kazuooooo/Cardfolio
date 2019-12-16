@@ -43,6 +43,8 @@ const Container = styled.div`
 
 const Name = styled.div`
   font-size: 36px;
+  text-align: center;
+  line-height: 1.2;
 `
 const JobTitle = styled.div`
   font-size: ${FontSize.SubTitle};

@@ -1,23 +1,27 @@
 {
   "frontSide": {
     "jobTitle": "エンジニア",
-    "name": "ウォンバット太郎"
+    "name": "松本和也"
   },
   "selfIntroduction": {
     "menuItemTitle": "自己紹介",
-    "description": "初めましてウォンバット太郎です。日本にあるウォンバットがいる動物園は3箇所しかないって知ってた？",
+    "description": "東京でフリーのエンジニアをしています。バックエンド〜フロントエンド、アプリ開発まで何でもやる系のエンジニアです。最近はデザインにも興味があり、勉強しています。",
     "socialURLs": [
       {
         "name": "github",
-        "url": "{your github id here}"
+        "url": "https://github.com/kazuooooo"
       },
       {
         "name": "facebook",
-        "url": "{your facebook id here}"
+        "url": "https://www.facebook.com/matsumoto.kazuya.52"
       },
       {
         "name": "medium",
-        "url": "{your medium id here}"
+        "url": "https://medium.com/@matsumotokazuya"
+      },
+      {
+        "name": "qiita",
+        "url": "https://qiita.com/kazuooooo"
       }
     ]
   },
@@ -25,38 +29,74 @@
     "menuItemTitle": "ワークス",
     "workItems": [
       {
-        "title": "The best Wombat Movie ever been made!!!",
-        "description": "Is it the best? No, next one.",
-        "url": "https://www.youtube.com/watch?v=OiuQ_rVM-WE",
+        "title": "Cardfolio",
+        "description": "[OSS] こんな名刺型のポートフォリオサイトが簡単に作れるフレームワーク",
+        "url": "https://github.com/kazuooooo/Cardfolio",
         "ogpURL": "https://i.ytimg.com/vi/OiuQ_rVM-WE/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCXb_TXomcREr4XtkFI8kV_KOwloA"
       },
       {
-        "title": "Can Wombat run?",
-        "description": "Yes! Wombats can run very fast :)",
-        "url": "https://www.youtube.com/watch?v=aUlB4GzeEIc",
-        "ogpURL": "https://i.ytimg.com/vi/aUlB4GzeEIc/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDo7q1rEcN0ug547pdailbO1Hl2bQ"
+        "title": "SwiftUIInfinityScroll",
+        "description": "[OSS] SwiftUI無限スクロール",
+        "url": "https://github.com/kazuooooo/Cardfolio",
+        "ogpURL": "https://i.ytimg.com/vi/OiuQ_rVM-WE/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCXb_TXomcREr4XtkFI8kV_KOwloA"
       },
       {
-        "title": "Baby Wombat",
-        "description": "My son become to run",
-        "url": "https://www.youtube.com/watch?v=hLL4ZrZeN3s",
-        "ogpURL": "https://i.ytimg.com/vi/hLL4ZrZeN3s/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDcp2y7YXRpXwAyHGIKFQhzA3TJ5g"
+        "title": "Apole",
+        "description": "[個人開発] 日程調整を便利にするWebアプリ",
+        "url": "https://www.apole.io/",
+        "ogpURL": "https://i.ytimg.com/vi/OiuQ_rVM-WE/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCXb_TXomcREr4XtkFI8kV_KOwloA"
+      },
+      {
+        "title": "MAMORIO",
+        "description": "主にインフラ、バックエンド(Rails)、フロントエンド(React)担当",
+        "url": "https://www.apole.io/",
+        "ogpURL": "https://mamorio.jp/img/section-bgimage1-874e620d.jpg"
+      },
+      {
+        "title": "FOLIO",
+        "description": "フロントエンド担当",
+        "url": "https://www.apole.io/",
+        "ogpURL": "https://folio-sec.com/images/top/share.jpg"
+      },
+      {
+        "title": "GLIT",
+        "description": "バックエンド(Rails)、アプリ(ReactNative)、機械学習(Python)担当",
+        "url": "https://www.apole.io/",
+        "ogpURL": "https://glit.io/assets/ogp-f580999543cde16218e238325f3c480cd3b60740203fcde69984c89a442f5247.png"
+      },
+      {
+        "title": "Spir",
+        "description": "[宣伝] Macのステッカー作ってます。",
+        "url": "https://www.apole.io/",
+        "ogpURL": "https://i.ytimg.com/vi/OiuQ_rVM-WE/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCXb_TXomcREr4XtkFI8kV_KOwloA"
+      },
+      {
+        "title": "Goldware株式会社",
+        "description": "アプリケーション開発",
+        "url": "http://www.goldware.jp/",
+        "ogpURL": "http://www.goldware.jp/wp-content/uploads/2015/07/fb-toukou4.png"
+      },
+      {
+        "title": "EdisonSticker",
+        "description": "[宣伝] Macのステッカー作ってます。",
+        "url": "https://www.apole.io/",
+        "ogpURL": "https://i.ytimg.com/vi/OiuQ_rVM-WE/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCXb_TXomcREr4XtkFI8kV_KOwloA"
       }
     ]
   },
   "contact": {
     "menuItemTitle": "コンタクト",
-    "description": "どちらの動物園でも出張いたします。",
+    "description": "ご連絡、お仕事のご依頼は以下よりお気軽にどうぞ。言語、フレームワーク問わずウェブアプリケーション〜ネイティブアプリケーション開発まで、なんでもご相談ください。特にデザインも含めた小規模開発であれば、個人で請け負いますので、デザイナーを雇うよりも安く開発させていただきます。",
     "contactItems": [
       {
         "type": "mail",
-        "label": "{your email here}",
-        "href": "mailto: {your email here}"
+        "label": "matsumotokazuya7@gmail.com",
+        "href": "mailto: matsumotokazuya7@gmail.com"
       },
       {
         "type": "messenger",
-        "label": "{your messenger id here}",
-        "href": "https://www.facebook.com/help/messenger-app/android/1047811435279151?helpref=uf_permalink"
+        "label": "matsumoto.kazuya.52",
+        "href": "https://m.me/matsumoto.kazuya.52"
       }
     ]
   },
@@ -64,19 +104,19 @@
     "menuItemTitle": "キャリア",
     "careerItems": [
       {
-        "year": "2017",
-        "title": "五月山動物園",
-        "description": "リードウォンバット"
+        "year": "2018〜",
+        "title": "フリーランスエンジニア",
+        "description": "1年間で5社ほどバックエンド、フロントエンド、アプリケーション開発"
       },
       {
-        "year": "2014〜2016",
-        "title": "茶臼山動物園",
-        "description": "見習いウォンバット"
+        "year": "2016〜2018",
+        "title": "MAMORIO株式会社",
+        "description": "バックエンドメインにフロントエンド、アプリなどエンジニアリング全般"
       },
       {
-        "year": "2000",
-        "title": "誕生",
-        "description": "@オーストラリア"
+        "year": "2014〜2017",
+        "title": "GREE株式会社",
+        "description": "ネイティブゲーム、Railsエンジニア"
       }
     ]
   },
@@ -84,37 +124,83 @@
     "menuItemTitle": "スキルセット",
     "skillDatum": [
       {
-        "categoryTitle": "ウォンバットスキル",
+        "categoryTitle": "バックエンド",
         "dataSets": [
           {
-            "label": "走る",
-            "level": 1,
+            "label": "Ruby/Rails",
+            "level": 5,
             "barColor": "#F8545B",
-            "annotation": "苦手"
+            "annotation": "一番長く使っていて慣れている。"
           },
           {
-            "label": "食べる",
-            "level": 5,
+            "label": "Node.js",
+            "level": 4,
             "barColor": "#54B3F8",
-            "annotation": "めちゃ食う"
+            "annotation": "それなりに"
           },
           {
-            "label": "寝る",
-            "level": 5,
+            "label": "Python",
+            "level": 3,
             "barColor": "#34D97A",
-            "annotation": "めちゃ寝る"
+            "annotation": "機械学習勉強中"
+          }
+        ]
+      },
+      {
+        "categoryTitle": "フロントエンド",
+        "dataSets": [
+          {
+            "label": "React",
+            "level": 4,
+            "barColor": "#F8545B",
+            "annotation": "このサイトもReact使ってます。"
+          },
+          {
+            "label": "Vue.js",
+            "level": 3,
+            "barColor": "#54B3F8",
+            "annotation": "ちょっとできる"
+          }
+        ]
+      },
+      {
+        "categoryTitle": "アプリ",
+        "dataSets": [
+          {
+            "label": "ReactNative",
+            "level": 4,
+            "barColor": "#F8545B",
+            "annotation": "複数アプリ開発経験あり"
+          },
+          {
+            "label": "Flutter",
+            "level": 2,
+            "barColor": "#54B3F8",
+            "annotation": "ちょっとできる"
+          },
+          {
+            "label": "Swift",
+            "level": 4,
+            "barColor": "#54B3F8",
+            "annotation": "個人で複数アプリリリース"
+          },
+          {
+            "label": "Android",
+            "level": 2,
+            "barColor": "#54B3F8",
+            "annotation": "ちょっとできる"
           }
         ]
       }
     ]
   },
   "siteMetaData": {
-    "title": "{your title}",
-    "description": "{your description}",
+    "title": "松本和也ドットアイオー",
+    "description": "フリーランスエンジニア松本和也のポートフォリオサイトです。",
     "type": "website",
     "image": "{your ogp image url here}",
     "twitter": {
-      "site": "{your twitter account here}"
+      "site": "@kazuooooo"
     }
   }
 }

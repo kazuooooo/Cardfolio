@@ -1,10 +1,10 @@
 module.exports = {
   ja: {
+    default: true,
     path: 'ja',
     locale: 'Japanese',
   },
   en: {
-    default: true,
     path: 'en',
     locale: 'English',
   },
