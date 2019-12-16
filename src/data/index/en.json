@@ -64,17 +64,17 @@
     "menuItemTitle": "Career",
     "careerItems": [
       {
-        "year": 2017,
+        "year": "2017〜",
         "title": "SatukiyamaZoo@Japan",
         "description": "Lead Wombat"
       },
       {
-        "year": 2014,
+        "year": "2014〜2016",
         "title": "ChausuyamaZoo@Japan",
         "description": "Disciple Wombat"
       },
       {
-        "year": 2000,
+        "year": "2000",
         "title": "Birth",
         "description": "@Australia"
       }

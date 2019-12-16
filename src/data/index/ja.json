@@ -64,17 +64,17 @@
     "menuItemTitle": "キャリア",
     "careerItems": [
       {
-        "year": 2017,
+        "year": "2017",
         "title": "五月山動物園",
         "description": "リードウォンバット"
       },
       {
-        "year": 2014,
+        "year": "2014〜2016",
         "title": "茶臼山動物園",
         "description": "見習いウォンバット"
       },
       {
-        "year": 2000,
+        "year": "2000",
         "title": "誕生",
         "description": "@オーストラリア"
       }

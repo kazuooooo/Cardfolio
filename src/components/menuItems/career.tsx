@@ -5,7 +5,7 @@ import { graphql } from 'gatsby'
 import { Margins } from '../../style'
 
 interface ICareerItem {
-  year: number
+  year: string
   title: string
   description: string
 }
@@ -29,8 +29,10 @@ const Career = (props: Props) => {
       <CareerItemList>
         {careerItems.map((career) => (
           <CareerItem key={career.title}>
-            <CareerItemCircle />
-            <CareerItemYear>{career.year}</CareerItemYear>
+            <CareerItemCircleWithYear>
+              <CareerItemCircle />
+              <CareerItemYear>{career.year}</CareerItemYear>
+            </CareerItemCircleWithYear>
             <CareerItemTextBox>
               <h2>{career.title}</h2>
               <p>{career.description}</p>
@@ -79,10 +81,14 @@ const CareerItemList = styled.div`
 `
 const CareerItem = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: top;
   margin-top: 36px;
 `
+const CareerItemCircleWithYear = styled.div`
+  display: flex;
+`
+
 const CareerItemCircle = styled.div`
   margin-top: 6px;
   height: 20px;
@@ -94,8 +100,8 @@ const CareerItemYear = styled.p`
   margin-left: ${Margins.Related};
 `
 const CareerItemTextBox = styled.div`
-  margin-left: ${Margins.LittleRelated};
-  max-width: 200px;
+  margin-left: 26px;
+  max-width: 260px;
   p {
     overflow-wrap: break-word;
     line-height: 1.5em;
