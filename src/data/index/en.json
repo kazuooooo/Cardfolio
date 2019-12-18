@@ -23,24 +23,29 @@
   },
   "works": {
     "menuItemTitle": "Works",
-    "workItems": [
-      {
-        "title": "The best Wombat Movie ever been made!!!",
-        "description": "Is it the best? No, next one!",
-        "url": "https://www.youtube.com/watch?v=OiuQ_rVM-WE",
-        "ogpImageURL": "https://i.ytimg.com/vi/OiuQ_rVM-WE/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCXb_TXomcREr4XtkFI8kV_KOwloA"
-      },
-      {
-        "title": "Can Wombat run?",
-        "description": "Yes! Wombats can run very fast :)",
-        "url": "https://www.youtube.com/watch?v=aUlB4GzeEIc",
-        "ogpImageURL": "https://i.ytimg.com/vi/aUlB4GzeEIc/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDo7q1rEcN0ug547pdailbO1Hl2bQ"
-      },
-      {
-        "title": "Baby Wombat",
-        "description": "My son become to run✌️",
-        "url": "https://www.youtube.com/watch?v=hLL4ZrZeN3s",
-        "ogpImageURL": "https://i.ytimg.com/vi/hLL4ZrZeN3s/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDcp2y7YXRpXwAyHGIKFQhzA3TJ5g"
+    "categories": [
+      { 
+        "categoryTitle": "Video",
+        "workItems": [
+          {
+            "title": "The best Wombat Movie ever been made!!!",
+            "description": "Is it the best? No, next one!",
+            "url": "https://www.youtube.com/watch?v=OiuQ_rVM-WE",
+            "ogpImageURL": "https://i.ytimg.com/vi/OiuQ_rVM-WE/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCXb_TXomcREr4XtkFI8kV_KOwloA"
+          },
+          {
+            "title": "Can Wombat run?",
+            "description": "Yes! Wombats can run very fast :)",
+            "url": "https://www.youtube.com/watch?v=aUlB4GzeEIc",
+            "ogpImageURL": "https://i.ytimg.com/vi/aUlB4GzeEIc/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDo7q1rEcN0ug547pdailbO1Hl2bQ"
+          },
+          {
+            "title": "Baby Wombat",
+            "description": "My son become to run✌️",
+            "url": "https://www.youtube.com/watch?v=hLL4ZrZeN3s",
+            "ogpImageURL": "https://i.ytimg.com/vi/hLL4ZrZeN3s/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLDcp2y7YXRpXwAyHGIKFQhzA3TJ5g"
+          }
+        ]
       }
     ]
   },

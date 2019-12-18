@@ -127,5 +127,6 @@ const Credit = styled.a`
   -ms-user-select: none;
   user-select: none;
   cursor: pointer;
+  z-index: -1;
 `
 export default BackSide
