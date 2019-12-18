@@ -69,7 +69,10 @@ const BackSide = ({ data }) => {
         {currentModal && MenuItems[currentModal]({ data: data[currentModal] })}
       </a.div>
       )}
-
+      {/* It's not mondatory, but I'm glad to keep this credit which link to cardfolio */}
+      <Credit onClick={(event) => event.stopPropagation()} href="https://github.com/kazuooooo/Cardfolio">
+        created by cardfolio
+      </Credit>
     </Container>
   )
 }
@@ -80,6 +83,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 `
 
 const ItemsContainer = styled.section`
@@ -98,6 +102,7 @@ const MenuItemLink = styled.a`
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
 `
 
 const CloseButton = styled.img`
@@ -106,5 +111,21 @@ const CloseButton = styled.img`
   position: absolute;
   top: 12px;
   right: 12px;
+`
+
+const Credit = styled.a`
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  font-size: ${FontSize.Supplemnet};
+  /*
+  Prevent text selection to bother rotation on PC
+  */
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
 `
 export default BackSide
