@@ -8,7 +8,7 @@ interface IWorkItem {
   title: string
   description: string
   url: string
-  ogpURL: string
+  ogpImageURL: string
 }
 interface Props {
   data: {
@@ -26,7 +26,7 @@ const Works = (props: Props) => {
       <Title>{menuItemTitle}</Title>
       {workItems.map((workItem: IWorkItem) => (
         <WorkItem key={workItem.title} href={workItem.url}>
-          <img src={workItem.ogpURL} alt={workItem.title} />
+          <img src={workItem.ogpImageURL} alt={workItem.title} />
           <div>
             <h3>{workItem.title}</h3>
             <p>{workItem.description}</p>
@@ -45,7 +45,7 @@ export const dataQuery = graphql`
         title
         description
         url
-        ogpURL
+        ogpImageURL
       }
     }
   }
