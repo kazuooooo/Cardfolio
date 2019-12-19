@@ -99,6 +99,7 @@ export const query = graphql`
         ...ContactData
         ...CareerData
         ...SkillSetData
+        ...GifData
       }
     }
   }

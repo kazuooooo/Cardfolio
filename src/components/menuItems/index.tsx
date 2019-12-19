@@ -3,6 +3,7 @@ import worksComponent from './works'
 import contactComponent from './contact'
 import careerComponent from './career'
 import skillSetComponent from './skillset'
+import Gif from './gif'
 
 export enum MenuItemKey {
   SelfIntroduction = 'selfIntroduction',
@@ -10,6 +11,7 @@ export enum MenuItemKey {
   Contact = 'contact',
   Career = 'career',
   SkillSet = 'skillSet',
+  Gif = 'gif'
 }
 
 export default {
@@ -18,4 +20,5 @@ export default {
   [MenuItemKey.Contact]: contactComponent,
   [MenuItemKey.Career]: careerComponent,
   [MenuItemKey.SkillSet]: skillSetComponent,
+  [MenuItemKey.Gif]: Gif,
 }

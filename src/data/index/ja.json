@@ -121,5 +121,9 @@
     "twitter": {
       "site": "{your twitter account here}"
     }
+  },
+  "gif": {
+    "url": "https://media3.giphy.com/media/14miSV6VMiO7te/200.webp?cid=790b7611929de751e751f8d71de77feb138954710d6ba8b1&rid=200.webp",
+    "alt": "alt"
   }
 }
