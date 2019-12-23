@@ -62,6 +62,7 @@ const BackSide = ({ data }) => {
           boxShadow: shadow,
           overflow: 'scroll',
           backgroundImage: `url(${Images.paper})`,
+          zIndex: 1,
         }}
         onClick={(event) => event.stopPropagation()}
       >
@@ -70,7 +71,7 @@ const BackSide = ({ data }) => {
       </a.div>
       )}
       {/* It's not mondatory, but I'm glad to keep this credit which link to cardfolio */}
-      <Credit onClick={(event) => event.stopPropagation()} href="https://github.com/kazuooooo/Cardfolio">
+      <Credit onClick={(event) => event.stopPropagation()} href="https://github.com/kazuooooo/Cardfolio" target="_blank">
         created by cardfolio
       </Credit>
     </Container>
@@ -127,6 +128,5 @@ const Credit = styled.a`
   -ms-user-select: none;
   user-select: none;
   cursor: pointer;
-  z-index: -1;
 `
 export default BackSide
