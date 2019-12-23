@@ -20,6 +20,7 @@
     "gatsby-source-filesystem": "^2.1.42",
     "gatsby-transformer-json": "^2.2.19",
     "gatsby-transformer-sharp": "^2.3.5",
+    "logrocket": "^1.0.5",
     "query-string": "^6.9.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",

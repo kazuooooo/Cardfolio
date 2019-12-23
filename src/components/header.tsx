@@ -89,7 +89,6 @@ const Header = ({
       },
     ]}
   >
-
     <script>
       {`
     (function(d) {
@@ -102,6 +101,8 @@ const Header = ({
     })(document);
     `}
     </script>
+    <script src="https://cdn.lr-ingest.io/LogRocket.min.js" crossOrigin="anonymous" />
+    <script>{`window.LogRocket && window.LogRocket.init('2dcep3/matsumotokazuyaio');`}</script>
   </Helmet>
 )
 
