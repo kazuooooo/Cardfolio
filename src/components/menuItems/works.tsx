@@ -39,7 +39,7 @@ const Category = ({ category }: { category: IWorkCategory}) => (
   <CategoryItem>
     <h2>{category.categoryTitle}</h2>
     { category.workItems.map((workItem: IWorkItem) => (
-      <WorkItem key={workItem.title} href={workItem.url}>
+      <WorkItem key={workItem.title} href={workItem.url} target="_blank">
         <img src={workItem.ogpImageURL} alt={workItem.title} />
         <div>
           <h3>{workItem.title}</h3>

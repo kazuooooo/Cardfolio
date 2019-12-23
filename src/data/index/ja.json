@@ -5,7 +5,7 @@
   },
   "selfIntroduction": {
     "menuItemTitle": "自己紹介",
-    "description": "東京でフリーのエンジニアをしています。バックエンド〜フロントエンド、アプリ開発まで何でもやる系のエンジニアです。最近はデザインにも興味があり、勉強しています。",
+    "description": "東京でフリーランスエンジニアをしています。主にスタートアップ系の会社でバックエンド〜フロントエンド、アプリ開発まで何でもやる系のエンジニアです。最近はデザインにも興味があり、勉強しています。あとウォンバットが大好き。",
     "socialURLs": [
       {
         "name": "github",
@@ -27,66 +27,81 @@
   },
   "works": {
     "menuItemTitle": "ワークス",
-    "workItems": [
+    "categories": [
       {
-        "title": "Cardfolio",
-        "description": "[OSS] こんな名刺型のポートフォリオサイトが簡単に作れるフレームワーク",
-        "url": "https://github.com/kazuooooo/Cardfolio",
-        "ogpURL": "https://i.ytimg.com/vi/OiuQ_rVM-WE/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCXb_TXomcREr4XtkFI8kV_KOwloA"
+        "categoryTitle": "OSS ✅",
+        "workItems": [
+          {
+            "title": "Cardfolio!",
+            "description": "こんな名刺型ポートフォリオサイトが簡単に作れるフレームワーク",
+            "url": "https://github.com/kazuooooo/Cardfolio",
+            "ogpImageURL": "https://cdn-images-1.medium.com/max/800/1*elFI82vuKu4mk6dFT2bj9w.png"
+          },
+          {
+            "title": "SwiftUIInfinityScroll",
+            "description": "SwiftUI無限スクロール",
+            "url": "https://github.com/kazuooooo/SwiftUIInfinityScroll",
+            "ogpImageURL": "https://camo.githubusercontent.com/4bacbd99ce72d44831534387cef5e68544f2ac96/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f37313135342f66366336316634372d326131632d336537372d326465662d6631343437326365313535382e706e67"
+          }
+        ]
       },
       {
-        "title": "SwiftUIInfinityScroll",
-        "description": "[OSS] SwiftUI無限スクロール",
-        "url": "https://github.com/kazuooooo/Cardfolio",
-        "ogpURL": "https://i.ytimg.com/vi/OiuQ_rVM-WE/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCXb_TXomcREr4XtkFI8kV_KOwloA"
+        "categoryTitle": "仕事 👨‍💻",
+        "workItems": [
+          {
+            "title": "GLIT",
+            "description": "バックエンド(Rails) & アプリエンジニア(ReactNative)。最近は機械学習担当",
+            "url": "https://glit.io/",
+            "ogpImageURL": "https://glit.io/assets/ogp-f580999543cde16218e238325f3c480cd3b60740203fcde69984c89a442f5247.png"
+          },
+          {
+            "title": "FOLIO",
+            "description": "フロントエンドエンジニア(React.js)",
+            "url": "https://folio-sec.com",
+            "ogpImageURL": "https://folio-sec.com/images/top/share.jpg"
+          },
+          {
+            "title": "株式会社セプテーニ・ベンチャーズ",
+            "description": "新規事業webアプリの開発バックエンド&フロントエンドエンジニア(Rails & Vue.js)",
+            "url": "http://www.septeniventures.co.jp/",
+            "ogpImageURL": "http://www.septeniventures.co.jp/img/logo.gif"
+          },
+          {
+            "title": "Goldware株式会社",
+            "description": "アプリ(ReactNative)、IoT系Webアプリのインフラ開発",
+            "url": "http://www.goldware.jp/",
+            "ogpImageURL": "http://www.goldware.jp/wp-content/uploads/2015/07/fb-toukou4.png"
+          },
+          {
+            "title": "MAMORIO",
+            "description": "インフラ、バックエンド(Rails)、フロントエンド、スマートスピーカースキル開発まで(React)までなんでもやる系エンジニア",
+            "url": "https://mamorio.jp",
+            "ogpImageURL": "https://mamorio.jp/img/section-bgimage1-874e620d.jpg"
+          }
+        ]
       },
       {
-        "title": "Apole",
-        "description": "[個人開発] 日程調整を便利にするWebアプリ",
-        "url": "https://www.apole.io/",
-        "ogpURL": "https://i.ytimg.com/vi/OiuQ_rVM-WE/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCXb_TXomcREr4XtkFI8kV_KOwloA"
-      },
-      {
-        "title": "MAMORIO",
-        "description": "主にインフラ、バックエンド(Rails)、フロントエンド(React)担当",
-        "url": "https://www.apole.io/",
-        "ogpURL": "https://mamorio.jp/img/section-bgimage1-874e620d.jpg"
-      },
-      {
-        "title": "FOLIO",
-        "description": "フロントエンド担当",
-        "url": "https://www.apole.io/",
-        "ogpURL": "https://folio-sec.com/images/top/share.jpg"
-      },
-      {
-        "title": "GLIT",
-        "description": "バックエンド(Rails)、アプリ(ReactNative)、機械学習(Python)担当",
-        "url": "https://www.apole.io/",
-        "ogpURL": "https://glit.io/assets/ogp-f580999543cde16218e238325f3c480cd3b60740203fcde69984c89a442f5247.png"
-      },
-      {
-        "title": "Spir",
-        "description": "[宣伝] Macのステッカー作ってます。",
-        "url": "https://www.apole.io/",
-        "ogpURL": "https://i.ytimg.com/vi/OiuQ_rVM-WE/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCXb_TXomcREr4XtkFI8kV_KOwloA"
-      },
-      {
-        "title": "Goldware株式会社",
-        "description": "アプリケーション開発",
-        "url": "http://www.goldware.jp/",
-        "ogpURL": "http://www.goldware.jp/wp-content/uploads/2015/07/fb-toukou4.png"
-      },
-      {
-        "title": "EdisonSticker",
-        "description": "[宣伝] Macのステッカー作ってます。",
-        "url": "https://www.apole.io/",
-        "ogpURL": "https://i.ytimg.com/vi/OiuQ_rVM-WE/hqdefault.jpg?sqp=-oaymwEZCNACELwBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCXb_TXomcREr4XtkFI8kV_KOwloA"
+        "categoryTitle": "個人開発 💪",
+        "workItems": [
+          {
+            "title": "Apole",
+            "description": "日程調整を便利にするWebアプリ",
+            "url": "https://www.apole.io/",
+            "ogpImageURL": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNTEuMzQgMTMxLjEiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMDBhZGI1O30uY2xzLTIsLmNscy02e2ZpbGw6IzM5M2U0Njt9LmNscy0ye3N0cm9rZTojMzkzZTQ2O3N0cm9rZS1taXRlcmxpbWl0OjEwO30uY2xzLTN7ZmlsbDojZmMzYzNjO30uY2xzLTR7ZmlsbDojZjhiNTAwO30uY2xzLTV7ZmlsbDojZmZmNGUwO308L3N0eWxlPjwvZGVmcz48dGl0bGU+44Ki44K744OD44OIIDI8L3RpdGxlPjxnIGlkPSLjg6zjgqTjg6Tjg7xfMiIgZGF0YS1uYW1lPSLjg6zjgqTjg6Tjg7wgMiI+PGcgaWQ9IuODreOCtCI+PGcgaWQ9Im8iPjxjaXJjbGUgY2xhc3M9ImNscy0xIiBjeD0iMjIxLjA2IiBjeT0iODAuNjgiIHI9IjMwIi8+PGNpcmNsZSBjbGFzcz0iY2xzLTIiIGN4PSIyMjEuMDYiIGN5PSI4MC42OCIgcj0iMTAiLz48L2c+PGcgaWQ9ImUiPjxlbGxpcHNlIGNsYXNzPSJjbHMtMyIgY3g9IjMyMC42NyIgY3k9IjgwLjY4IiByeD0iMzAuNjYiIHJ5PSIzMCIvPjxlbGxpcHNlIGNsYXNzPSJjbHMtMiIgY3g9IjMyMS42NyIgY3k9IjgwLjY4IiByeD0iMTAuMjIiIHJ5PSIxMCIvPjxyZWN0IGNsYXNzPSJjbHMtMyIgeD0iMzE1LjU5IiB5PSI3OC43MyIgd2lkdGg9IjIwIiBoZWlnaHQ9IjUiIHJ4PSIyLjUiLz48L2c+PGcgaWQ9ImwiPjxjaXJjbGUgY2xhc3M9ImNscy00IiBjeD0iMjcwLjEyIiBjeT0iMTAwLjg2IiByPSIxMCIvPjxjaXJjbGUgY2xhc3M9ImNscy00IiBjeD0iMjcwLjEyIiBjeT0iMTkuNjQiIHI9IjEwIi8+PHJlY3QgY2xhc3M9ImNscy00IiB4PSIyNjAuMTIiIHk9IjE5LjY0IiB3aWR0aD0iMjAiIGhlaWdodD0iODEuMjIiLz48L2c+PGcgaWQ9InAiPjxyZWN0IGNsYXNzPSJjbHMtNSIgeD0iMTE1LjUiIHk9IjYwLjI1IiB3aWR0aD0iMjAiIGhlaWdodD0iNjAuODUiLz48Y2lyY2xlIGNsYXNzPSJjbHMtNSIgY3g9IjEyNS41IiBjeT0iMTIxLjEiIHI9IjEwIi8+PGNpcmNsZSBjbGFzcz0iY2xzLTUiIGN4PSIxMjUuNSIgY3k9IjYwLjI1IiByPSIxMCIvPjxjaXJjbGUgY2xhc3M9ImNscy01IiBjeD0iMTUzLjUiIGN5PSI4MC41NiIgcj0iMzAiLz48Y2lyY2xlIGNsYXNzPSJjbHMtNiIgY3g9IjE1My41IiBjeT0iODAuNTYiIHI9IjEwIi8+PC9nPjxnIGlkPSJhIj48ZyBpZD0i6buE5Zyf6ImyIj48cmVjdCBjbGFzcz0iY2xzLTEiIHg9IjM1IiB5PSI1OC44NSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjQzLjg4IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMjUuNzkgMzUuOCkgcm90YXRlKDkwKSIvPjxjaXJjbGUgY2xhc3M9ImNscy0xIiBjeD0iNjYuOTQiIGN5PSI4MC43OSIgcj0iMTAiLz48Y2lyY2xlIGNsYXNzPSJjbHMtMSIgY3g9IjIzLjA2IiBjeT0iODAuNzkiIHI9IjEwIi8+PC9nPjxnIGlkPSLpu4TlnJ/oibItMiIgZGF0YS1uYW1lPSLpu4TlnJ/oibIiPjxyZWN0IGNsYXNzPSJjbHMtNCIgeD0iNjYiIHk9IjUuMTUiIHdpZHRoPSIyMCIgaGVpZ2h0PSI5Ny43NCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTY4LjE2IDY4LjE2KSByb3RhdGUoMTUzLjMyKSIvPjxjaXJjbGUgY2xhc3M9ImNscy00IiBjeD0iNTMuOTQiIGN5PSIxMC4xMiIgcj0iMTAiLz48Y2lyY2xlIGNsYXNzPSJjbHMtNCIgY3g9Ijk3Ljk0IiBjeT0iOTcuNjkiIHI9IjEwIi8+PC9nPjxnIGlkPSLpu4TlnJ/oibItMyIgZGF0YS1uYW1lPSLpu4TlnJ/oibIiPjxyZWN0IGNsYXNzPSJjbHMtMyIgeD0iMjEuOTQiIHk9IjUuMDMiIHdpZHRoPSIyMCIgaGVpZ2h0PSI5Ny43NCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjcuNiAtOC42KSByb3RhdGUoMjYuNjgpIi8+PGNpcmNsZSBjbGFzcz0iY2xzLTMiIGN4PSI1NCIgY3k9IjEwIiByPSIxMCIvPjxjaXJjbGUgY2xhc3M9ImNscy0zIiBjeD0iMTAiIGN5PSI5Ny41NyIgcj0iMTAiLz48L2c+PC9nPjwvZz48L2c+PC9zdmc+"
+          },
+          {
+            "title": "EdisonSticker",
+            "description": "開発というかBaseで作ったECショップ。Macのステッカー作ってます。",
+            "url": "https://www.apole.io/",
+            "ogpImageURL": "https://base-ec2if.akamaized.net/w=2048,a=0,q=90,u=0/images/user/logo/63c63106ffa765e036cbec3671d1c818.png"
+          }
+        ]
       }
     ]
   },
   "contact": {
     "menuItemTitle": "コンタクト",
-    "description": "ご連絡、お仕事のご依頼は以下よりお気軽にどうぞ。言語、フレームワーク問わずウェブアプリケーション〜ネイティブアプリケーション開発まで、なんでもご相談ください。特にデザインも含めた小規模開発であれば、個人で請け負いますので、デザイナーを雇うよりも安く開発させていただきます。",
+    "description": "ご連絡、お仕事のご依頼は以下よりお気軽にどうぞ。言語、フレームワーク問わずウェブアプリケーション〜ネイティブアプリケーション開発まで、お気軽にご相談ください。特にデザインも含めた小規模開発であれば、個人で請け負いますので、デザイナーを雇うよりも安く開発させていただきます。",
     "contactItems": [
       {
         "type": "mail",
@@ -106,17 +121,22 @@
       {
         "year": "2018〜",
         "title": "フリーランスエンジニア",
-        "description": "1年間で5社ほどバックエンド、フロントエンド、アプリケーション開発"
+        "description": "様々な言語、フレームワークのバックエンド、フロントエンド、アプリケーション開発など1年間で5社ほどの開発をお手伝いさせていただいています。"
       },
       {
-        "year": "2016〜2018",
+        "year": "2017〜2018",
         "title": "MAMORIO株式会社",
         "description": "バックエンドメインにフロントエンド、アプリなどエンジニアリング全般"
       },
       {
-        "year": "2014〜2017",
+        "year": "2015-2017",
+        "title": "スマートシッター株式会社(GREEより出向)",
+        "description": "新規事業のRailsエンジニア"
+      },
+      {
+        "year": "2014〜2015",
         "title": "GREE株式会社",
-        "description": "ネイティブゲーム、Railsエンジニア"
+        "description": "総合職からエンジニアにジョブチェンジ、Unityでエンジニアとしてネイティブゲームの開発"
       }
     ]
   },
