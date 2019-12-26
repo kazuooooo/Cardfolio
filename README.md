@@ -1,79 +1,104 @@
-# Welcome 😄
-Cardfolio! is a portfolio site framework which can make a portfolio site just like your business card,
+<p align="center"><img width="480" alt="アセット 7@2x.png" src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/71154/515b385c-53e9-818d-3ccf-e87613a31f08.png"></p>
 
-that is :credit_card: **Cardfolio site** :credit_card:
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)
+[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Let%E2%80%99s+make+your+portfolio+site+from+a+buissiness+card+%F0%9F%92%B3%F0%9F%92%A8&url=https://github.com/kazuooooo/Cardfolio&hashtags=portfolio,developers,gatsby)
 
-You can surprise people who received your card!
+`Cardfolio!` is a only one cardfolio site framework.
 
-Anyway, this is my card,  see the magic bia QRCode :sparkles:
+If you have any experience of React, you can easily create your own cardfolio site.
 
-TODO: 英語版差し替え
+Wait, what's cardfolio site?? See below.
 
-<img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/71154/1e7fa747-87c1-b90c-759e-ea948f1deb55.png" width="300"><img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/71154/1717c1bc-99a9-232f-06bc-4de7edd86f2a.png" width="300">
+(ここに英語版のいい感じのgif)
 
-If you browse this site by mobile.
-You can access from [here](https://matsumotokazuya.io/en?fromQR=1)
+Yes, cardfolio site is portfolio site just like buisiness card!!
 
-# How to make your Cardfolio site 💳
-You can easily create your Cardfolio site following steps.
+# Why cardfoio site?
 
-1. Fork this repository
-2. Install dependencies and start server
+Cardfolio site's true worth is definitely seen when you hand over your buisiness card to someone.
 
-```bash
-yarn
-gatsby develop
-```
+Below image is my business card, imagine you receive this card.
 
-3. Replace src/data/en.json with your data. 
+(If you browse this site by mobile. You can access from [here](https://matsumotokazuya.io/en?fromQR=1))
+
+![cardfolio.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/71154/8a24bc7d-67f1-97f8-a54a-3aa81996b08c.png)
+
+How was that? 
+
+You can make a great impression to receiver like you just felt :smile:
+
+# Usage 💳
+
+You can create your own cardfolio site following steps.
+
+1. **Fork this repository**
+2. **Install dependencies and start server.**
+
+    ```bash
+    yarn
+    gatsby develop
+    ```
+    Then check develop server is working by accessing localhost:8000
+
+3. **Replace src/data/en.json with your data.**
+
+    Except some images, all data which are used in cardfolio are written in src/data/xx.json file. 
+
+    (default locale is en.json, if you want to change default locale or apply i18n see the section below)
+
+    Let’s start from simple example, FrontSide.
+
+    Edit src/data/en.json like this.
+
+    ```json
+    {
+      "frontSide": {
+      "jobTitle": "{Your Job Title Here}",
+      "name": "{Your name here}"
+    }
+    …
+   }
+   ```
+
+    The top key name, frontSide indicates component name. 
+
+    And child key value pairs indicates where the value is used for in the component.
+
+    Access to localhost:8000 to check changes are reflected like below.
+
+    ![Cursor_と_localhost_8000_en.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/71154/737451ff-9172-72a1-68fa-36b212206a8b.png)
+
+    You can also replace BackSide Data with the same way.
+    And replace profile.png with your profile image.
+
+4. **Deploy your site.**
+    Any provider is ok, but I recommend to deply by netlify. Cuz Gatsby has great compatibility  with Netlify.
+    Details see [here](https://www.gatsbyjs.org/docs/deploying-to-netlify/)
 
 
-All data which are used in cardfolio is written in src/data/xx.json file. 
-(default locale is en.json, if you want to change default locale or apply i18n see the section below)
+5. **(Optional but strongly recommended) Create a your real buisiness card.**
 
-Let’s start from simple example, FrontSide.
-Edit src/data/en.json like this.
+    Let's create your buisiness card to make people surprise!
 
-```json
-{
-  "frontSide": {
-    "jobTitle": "{Your Job Title Here}",
-    "name": "{Your name here}"
-  }
-  …
-}
-```
+    Make frontside of card just like cardforio site you implemented.
 
-Top key name is component name and child keys indicate where the value is used and values itself are what values displays for these keys.
+    In backside, you need to print QRCode indicates your cardfolio site.
 
-Access to localhost:8000 to check changes are reflected.
+    Create QRCode using QRCode gen service like [this](https://www.unitag.io/qrcode)
 
-![Cursor_と_localhost_8000_en.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/71154/737451ff-9172-72a1-68fa-36b212206a8b.png)
+    The QRCode url must include params fromQR=1. The parameter is used to detect access from QRCode or not.
 
-You can also replace BackSide Data with the same way.
+    ex) https://yoursite.com?fromQR=1
 
-4. Create a your real buisiness card. It must include QRCode which refer to your cardfolio site url, 
+    Replace your QRCode image with qr-code.png for fadeout animation.
 
-and the url must include params fromQR=1. The parameter is used to detect access from QRCode or not.
+6. **That’s all, You’ve created your original cardfolio site 🎉**
 
+    At last, don't forget to let me know your site, I want to add you site [example list]        (https://github.com/kazuooooo/Cardfolio#examples-)
 
-ex) https://yorsite.com?fromQR=1
+    (It’s ok to create PR to add you site to list)
 
-This step is optional, but I strongly recommend to make people surprise :)
-
-5. Replace images(qr-code.png and profile.png) with your site QRCode and Profile picture.
-
-6. Deploy your site. Any provider is ok, but I recommend to deply by netlify. Cuz Gatsby has great compatibility  with Netlify.
-
-Details see [here](https://www.gatsbyjs.org/docs/deploying-to-netlify/)
-
-7. That’s all, You’ve created your original cardfolio site 🎉
-
-
-At last, don't forget to let me know your site, I want to add you site example list. 
-
-(It’s ok to create PR to add you site to list)
-
+---
 
 <details>
 <summary><h1>Customization🔧</h1></summary>
@@ -99,6 +124,7 @@ Cardfolio! have very simple components directories below.
 │   │   └── works.tsx
 │   └── qrCodeBackSide.tsx // qr code back side for fade out
 ```
+
 
 ## Want to customize visually :art:
 
@@ -237,6 +263,8 @@ Complete detail see this [commit](https://github.com/kazuooooo/Cardfolio/commit/
 
 </details>
 
+---
+
 <details>
 <summary><h1>i18n 🌍</h1></summary>
 
@@ -304,10 +332,14 @@ localhost:8000    (Japanese default)
 localhost:8000/en    (English)
 </details>
 
+---
+
 # Examples 🗃
 These are portfolio sites created by Cardfolio! (order by created day asc)
 
 [matsumotokazuya.io](https://matsumotokazuya.io/en?fromQR=1)
+
+---
 
 # Contribution :man_technologist:
 Any issues and pr is welcome :)
@@ -318,6 +350,8 @@ please make pull request by these step.
 2. Checkout master branch
 3. Make your change
 4. Create pull request
+
+---
 
 # License :writing_hand:
 Cardfolio! is available under the MIT license.
