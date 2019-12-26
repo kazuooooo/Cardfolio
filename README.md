@@ -9,8 +9,7 @@ If you have any experience of React, you can easily create your own cardfolio si
 
 Wait, what's cardfolio site?? See below.
 
-(ここに英語版のいい感じのgif)
-
+<p align="center"><img src="https://cdn-images-1.medium.com/max/800/1*xQr3p-ca88kRWFm5bJqqBw.gif" height="500"></p>
 Yes, cardfolio site is portfolio site just like buisiness card!!
 
 # Why cardfoio site?
@@ -21,7 +20,7 @@ Below image is my business card, imagine you receive this card.
 
 (If you browse this site by mobile. You can access from [here](https://matsumotokazuya.io/en?fromQR=1))
 
-![cardfolio.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/71154/8a24bc7d-67f1-97f8-a54a-3aa81996b08c.png)
+<img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/71154/8a24bc7d-67f1-97f8-a54a-3aa81996b08c.png" height="500">
 
 How was that? 
 
@@ -66,7 +65,7 @@ You can create your own cardfolio site following steps.
 
     Access to localhost:8000 to check changes are reflected like below.
 
-    ![Cursor_と_localhost_8000_en.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/71154/737451ff-9172-72a1-68fa-36b212206a8b.png)
+<img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/71154/737451ff-9172-72a1-68fa-36b212206a8b.png" height="500">
 
     You can also replace BackSide Data with the same way.
     And replace profile.png with your profile image.
