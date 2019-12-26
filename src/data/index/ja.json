@@ -55,7 +55,7 @@
             "ogpImageURL": "https://glit.io/assets/ogp-f580999543cde16218e238325f3c480cd3b60740203fcde69984c89a442f5247.png"
           },
           {
-            "title": "FOLIO",
+            "title": "foilo",
             "description": "フロントエンドエンジニア(React.js)",
             "url": "https://folio-sec.com",
             "ogpImageURL": "https://folio-sec.com/images/top/share.jpg"
@@ -92,7 +92,7 @@
           {
             "title": "EdisonSticker",
             "description": "開発というかBaseで作ったECショップ。Macのステッカー作ってます。",
-            "url": "https://www.apole.io/",
+            "url": "https://edison.base.shop/",
             "ogpImageURL": "https://base-ec2if.akamaized.net/w=2048,a=0,q=90,u=0/images/user/logo/63c63106ffa765e036cbec3671d1c818.png"
           }
         ]
@@ -200,7 +200,7 @@
           },
           {
             "label": "Swift",
-            "level": 4,
+            "level": 3,
             "barColor": "#54B3F8",
             "annotation": "個人で複数アプリリリース"
           },
@@ -218,7 +218,7 @@
     "title": "松本和也ドットアイオー",
     "description": "フリーランスエンジニア松本和也のポートフォリオサイトです。",
     "type": "website",
-    "image": "{your ogp image url here}",
+    "image": "https://forvarioushosting.s3-ap-northeast-1.amazonaws.com/icon.png",
     "twitter": {
       "site": "@kazuooooo"
     }
