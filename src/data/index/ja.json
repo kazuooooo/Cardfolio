@@ -5,7 +5,7 @@
   },
   "selfIntroduction": {
     "menuItemTitle": "自己紹介",
-    "description": "東京でフリーランスエンジニアをしています。主にスタートアップ系の会社でバックエンド〜フロントエンド、アプリ開発まで何でもやる系のエンジニアです。最近はデザインにも興味があり、デジハリで勉強しています。あとウォンバットが大好き。",
+    "description": "東京でフリーランスエンジニアをしています(小さい会社もやっています)。主にスタートアップ系の会社でバックエンド〜フロントエンド、アプリ開発まで何でもやる系のエンジニアです。最近は開発だけでなくサービス開発全般に興味があります。あとウォンバットが大好き。",
     "socialURLs": [
       {
         "name": "github",
@@ -28,6 +28,23 @@
   "works": {
     "menuItemTitle": "ワークス",
     "categories": [
+      {
+        "categoryTitle": "個人開発 💪",
+        "workItems": [
+          {
+            "title": "Apole",
+            "description": "日程調整を便利にするWebアプリ",
+            "url": "https://www.apole.io/",
+            "ogpImageURL": "https://wombat-tech.com/static/36650c6c653ede7cef6661e84e60d709/a0bb1/cover_apole.png"
+          },
+          {
+            "title": "そっくり度診断",
+            "description": "2人顔のそっくり度を診断するアプリ",
+            "url": "https://www.apole.io/",
+            "ogpImageURL": "https://wombat-tech.com/static/9c2d1d7c0e3bbe9e06370c8a78dd746c/a0bb1/cover_sokkuri.png"
+          }
+        ]
+      },
       {
         "categoryTitle": "OSS ✅",
         "workItems": [
@@ -79,23 +96,6 @@
             "ogpImageURL": "https://mamorio.jp/img/section-bgimage1-874e620d.jpg"
           }
         ]
-      },
-      {
-        "categoryTitle": "個人開発 💪",
-        "workItems": [
-          {
-            "title": "Apole",
-            "description": "日程調整を便利にするWebアプリ",
-            "url": "https://www.apole.io/",
-            "ogpImageURL": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNTEuMzQgMTMxLjEiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMDBhZGI1O30uY2xzLTIsLmNscy02e2ZpbGw6IzM5M2U0Njt9LmNscy0ye3N0cm9rZTojMzkzZTQ2O3N0cm9rZS1taXRlcmxpbWl0OjEwO30uY2xzLTN7ZmlsbDojZmMzYzNjO30uY2xzLTR7ZmlsbDojZjhiNTAwO30uY2xzLTV7ZmlsbDojZmZmNGUwO308L3N0eWxlPjwvZGVmcz48dGl0bGU+44Ki44K744OD44OIIDI8L3RpdGxlPjxnIGlkPSLjg6zjgqTjg6Tjg7xfMiIgZGF0YS1uYW1lPSLjg6zjgqTjg6Tjg7wgMiI+PGcgaWQ9IuODreOCtCI+PGcgaWQ9Im8iPjxjaXJjbGUgY2xhc3M9ImNscy0xIiBjeD0iMjIxLjA2IiBjeT0iODAuNjgiIHI9IjMwIi8+PGNpcmNsZSBjbGFzcz0iY2xzLTIiIGN4PSIyMjEuMDYiIGN5PSI4MC42OCIgcj0iMTAiLz48L2c+PGcgaWQ9ImUiPjxlbGxpcHNlIGNsYXNzPSJjbHMtMyIgY3g9IjMyMC42NyIgY3k9IjgwLjY4IiByeD0iMzAuNjYiIHJ5PSIzMCIvPjxlbGxpcHNlIGNsYXNzPSJjbHMtMiIgY3g9IjMyMS42NyIgY3k9IjgwLjY4IiByeD0iMTAuMjIiIHJ5PSIxMCIvPjxyZWN0IGNsYXNzPSJjbHMtMyIgeD0iMzE1LjU5IiB5PSI3OC43MyIgd2lkdGg9IjIwIiBoZWlnaHQ9IjUiIHJ4PSIyLjUiLz48L2c+PGcgaWQ9ImwiPjxjaXJjbGUgY2xhc3M9ImNscy00IiBjeD0iMjcwLjEyIiBjeT0iMTAwLjg2IiByPSIxMCIvPjxjaXJjbGUgY2xhc3M9ImNscy00IiBjeD0iMjcwLjEyIiBjeT0iMTkuNjQiIHI9IjEwIi8+PHJlY3QgY2xhc3M9ImNscy00IiB4PSIyNjAuMTIiIHk9IjE5LjY0IiB3aWR0aD0iMjAiIGhlaWdodD0iODEuMjIiLz48L2c+PGcgaWQ9InAiPjxyZWN0IGNsYXNzPSJjbHMtNSIgeD0iMTE1LjUiIHk9IjYwLjI1IiB3aWR0aD0iMjAiIGhlaWdodD0iNjAuODUiLz48Y2lyY2xlIGNsYXNzPSJjbHMtNSIgY3g9IjEyNS41IiBjeT0iMTIxLjEiIHI9IjEwIi8+PGNpcmNsZSBjbGFzcz0iY2xzLTUiIGN4PSIxMjUuNSIgY3k9IjYwLjI1IiByPSIxMCIvPjxjaXJjbGUgY2xhc3M9ImNscy01IiBjeD0iMTUzLjUiIGN5PSI4MC41NiIgcj0iMzAiLz48Y2lyY2xlIGNsYXNzPSJjbHMtNiIgY3g9IjE1My41IiBjeT0iODAuNTYiIHI9IjEwIi8+PC9nPjxnIGlkPSJhIj48ZyBpZD0i6buE5Zyf6ImyIj48cmVjdCBjbGFzcz0iY2xzLTEiIHg9IjM1IiB5PSI1OC44NSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjQzLjg4IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMjUuNzkgMzUuOCkgcm90YXRlKDkwKSIvPjxjaXJjbGUgY2xhc3M9ImNscy0xIiBjeD0iNjYuOTQiIGN5PSI4MC43OSIgcj0iMTAiLz48Y2lyY2xlIGNsYXNzPSJjbHMtMSIgY3g9IjIzLjA2IiBjeT0iODAuNzkiIHI9IjEwIi8+PC9nPjxnIGlkPSLpu4TlnJ/oibItMiIgZGF0YS1uYW1lPSLpu4TlnJ/oibIiPjxyZWN0IGNsYXNzPSJjbHMtNCIgeD0iNjYiIHk9IjUuMTUiIHdpZHRoPSIyMCIgaGVpZ2h0PSI5Ny43NCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTY4LjE2IDY4LjE2KSByb3RhdGUoMTUzLjMyKSIvPjxjaXJjbGUgY2xhc3M9ImNscy00IiBjeD0iNTMuOTQiIGN5PSIxMC4xMiIgcj0iMTAiLz48Y2lyY2xlIGNsYXNzPSJjbHMtNCIgY3g9Ijk3Ljk0IiBjeT0iOTcuNjkiIHI9IjEwIi8+PC9nPjxnIGlkPSLpu4TlnJ/oibItMyIgZGF0YS1uYW1lPSLpu4TlnJ/oibIiPjxyZWN0IGNsYXNzPSJjbHMtMyIgeD0iMjEuOTQiIHk9IjUuMDMiIHdpZHRoPSIyMCIgaGVpZ2h0PSI5Ny43NCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjcuNiAtOC42KSByb3RhdGUoMjYuNjgpIi8+PGNpcmNsZSBjbGFzcz0iY2xzLTMiIGN4PSI1NCIgY3k9IjEwIiByPSIxMCIvPjxjaXJjbGUgY2xhc3M9ImNscy0zIiBjeD0iMTAiIGN5PSI5Ny41NyIgcj0iMTAiLz48L2c+PC9nPjwvZz48L2c+PC9zdmc+"
-          },
-          {
-            "title": "EdisonSticker",
-            "description": "開発というかBaseで作ったECショップ。Macのステッカー作ってます。",
-            "url": "https://edison.base.shop/",
-            "ogpImageURL": "https://base-ec2if.akamaized.net/w=2048,a=0,q=90,u=0/images/user/logo/63c63106ffa765e036cbec3671d1c818.png"
-          }
-        ]
       }
     ]
   },
@@ -119,6 +119,11 @@
     "menuItemTitle": "キャリア",
     "careerItems": [
       {
+        "year": "2020〜",
+        "title": "ウォンバットテクノロジー",
+        "description": "自社サービスの開発をしています。"
+      },
+      {
         "year": "2018〜",
         "title": "フリーランスエンジニア",
         "description": "様々な言語、フレームワークのバックエンド、フロントエンド、アプリケーション開発など1年間で5社ほどの開発をお手伝いさせていただいています。"
@@ -134,7 +139,7 @@
         "description": "新規事業のRailsエンジニア"
       },
       {
-        "year": "2014〜2015",
+        "year": "2014〜2017",
         "title": "GREE株式会社",
         "description": "総合職からエンジニアにジョブチェンジ、Unityでエンジニアとしてネイティブゲームの開発"
       }
@@ -150,19 +155,19 @@
             "label": "Ruby/Rails",
             "level": 5,
             "barColor": "#F8545B",
-            "annotation": "一番長く使っていて慣れている。"
+            "annotation": "昔から使っていて慣れている。"
           },
           {
             "label": "Node.js",
-            "level": 4,
+            "level": 5,
             "barColor": "#54B3F8",
-            "annotation": "それなりに"
+            "annotation": "最近よく使っている"
           },
           {
             "label": "Python",
             "level": 3,
             "barColor": "#34D97A",
-            "annotation": "機械学習勉強中"
+            "annotation": "少し経験あり"
           }
         ]
       },
@@ -177,9 +182,9 @@
           },
           {
             "label": "Vue.js",
-            "level": 3,
+            "level": 4,
             "barColor": "#54B3F8",
-            "annotation": "ちょっとできる"
+            "annotation": "ReactよりVueの方が好き"
           }
         ]
       },
@@ -193,16 +198,16 @@
             "annotation": "複数アプリ開発経験あり"
           },
           {
-            "label": "Flutter",
-            "level": 2,
-            "barColor": "#54B3F8",
-            "annotation": "ちょっとできる"
-          },
-          {
             "label": "Swift",
-            "level": 3,
+            "level": 4,
             "barColor": "#54B3F8",
             "annotation": "個人で複数アプリリリース"
+          },
+          {
+            "label": "Flutter",
+            "level": 3,
+            "barColor": "#54B3F8",
+            "annotation": "ちょっとできる"
           },
           {
             "label": "Android",
