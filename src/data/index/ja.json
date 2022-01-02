@@ -36,15 +36,21 @@
         "categoryTitle": "個人開発 💪",
         "workItems": [
           {
+            "title": "日程調整のニッテ",
+            "description": "日程調整を効率化するWebサービス",
+            "url": "https://site.nitte.app/",
+            "ogpImageURL": "https://storage.googleapis.com/production-os-assets/assets/a08c15f7-2214-4706-b045-c77f709ed247"
+          },
+          {
             "title": "Apole",
-            "description": "日程調整を便利にするWebアプリ",
+            "description": "キーボードにカレンダー表示できるアプリ",
             "url": "https://www.apole.io/",
             "ogpImageURL": "https://wombat-tech.com/static/36650c6c653ede7cef6661e84e60d709/a0bb1/cover_apole.png"
           },
           {
             "title": "そっくり度診断",
             "description": "2人顔のそっくり度を診断するアプリ",
-            "url": "https://www.apole.io/",
+            "url": "https://apps.apple.com/jp/app/%E3%81%9D%E3%81%A3%E3%81%8F%E3%82%8A%E5%BA%A6%E8%A8%BA%E6%96%AD-2%E4%BA%BA%E3%81%AE%E9%A1%94%E3%81%AF%E3%81%A9%E3%81%AE%E3%81%8F%E3%82%89%E3%81%84%E4%BC%BC%E3%81%A6%E3%81%84%E3%82%8B/id1516163819",
             "ogpImageURL": "https://wombat-tech.com/static/9c2d1d7c0e3bbe9e06370c8a78dd746c/a0bb1/cover_sokkuri.png"
           }
         ]
@@ -70,10 +76,16 @@
         "categoryTitle": "仕事 👨‍💻",
         "workItems": [
           {
+            "title": "株式会社iCARE",
+            "description": "フロントエンド(Vue)を担当",
+            "url": "https://www.icare.jpn.com/",
+            "ogpImageURL": "https://prtimes.jp/i/47342/68/origin/d47342-68-671783-0.png"
+          },
+          {
             "title": "GLIT",
             "description": "バックエンド(Rails) & アプリエンジニア(ReactNative)。最近は機械学習担当",
             "url": "https://glit.io/",
-            "ogpImageURL": "https://glit.io/assets/ogp-f580999543cde16218e238325f3c480cd3b60740203fcde69984c89a442f5247.png"
+            "ogpImageURL": "data:image/png;base64,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"
           },
           {
             "title": "foilo",
@@ -85,7 +97,7 @@
             "title": "株式会社セプテーニ・ベンチャーズ",
             "description": "新規事業webアプリの開発バックエンド&フロントエンドエンジニア(Rails & Vue.js)",
             "url": "http://www.septeniventures.co.jp/",
-            "ogpImageURL": "http://www.septeniventures.co.jp/img/logo.gif"
+            "ogpImageURL": "https://i3.gamebiz.jp/images/original/1660150359600f85aeef6560011.jpg"
           },
           {
             "title": "Goldware株式会社",
@@ -97,7 +109,7 @@
             "title": "MAMORIO",
             "description": "インフラ、バックエンド(Rails)、フロントエンド、スマートスピーカースキル開発まで(React)までなんでもやる系エンジニア",
             "url": "https://mamorio.jp",
-            "ogpImageURL": "https://mamorio.jp/img/section-bgimage1-874e620d.jpg"
+            "ogpImageURL": "https://user-images.githubusercontent.com/6919381/147871867-247c0ea2-0597-43f8-8702-54414035f9a7.jpeg"
           }
         ]
       }
@@ -156,16 +168,16 @@
         "categoryTitle": "バックエンド",
         "dataSets": [
           {
-            "label": "Ruby/Rails",
-            "level": 5,
-            "barColor": "#F8545B",
-            "annotation": "昔から使っていて慣れている。"
-          },
-          {
             "label": "Node.js",
             "level": 5,
             "barColor": "#54B3F8",
             "annotation": "最近よく使っている"
+          },
+          {
+            "label": "Ruby/Rails",
+            "level": 4,
+            "barColor": "#F8545B",
+            "annotation": "昔よく使っていてた"
           },
           {
             "label": "Python",
@@ -186,9 +198,9 @@
           },
           {
             "label": "Vue.js",
-            "level": 4,
+            "level": 5,
             "barColor": "#54B3F8",
-            "annotation": "ReactよりVueの方が好き"
+            "annotation": "最近はVueがメイン"
           }
         ]
       },
@@ -199,23 +211,17 @@
             "label": "ReactNative",
             "level": 4,
             "barColor": "#F8545B",
-            "annotation": "複数アプリ開発経験あり"
+            "annotation": "複数アプリ実務経験あり"
           },
           {
             "label": "Swift",
             "level": 4,
             "barColor": "#54B3F8",
-            "annotation": "個人で複数アプリリリース"
+            "annotation": "個人で複数アプリリリース、実務も経験"
           },
           {
             "label": "Flutter",
             "level": 3,
-            "barColor": "#54B3F8",
-            "annotation": "ちょっとできる"
-          },
-          {
-            "label": "Android",
-            "level": 2,
             "barColor": "#54B3F8",
             "annotation": "ちょっとできる"
           }

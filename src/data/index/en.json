@@ -33,6 +33,29 @@
     "menuItemTitle": "Works",
     "categories": [
       {
+        "categoryTitle": "Personal 💪",
+        "workItems": [
+          {
+            "title": "Nitte",
+            "description": "Effective Scheduling Serivce(Japanese only)",
+            "url": "https://site.nitte.app/",
+            "ogpImageURL": "https://storage.googleapis.com/production-os-assets/assets/a08c15f7-2214-4706-b045-c77f709ed247"
+          },
+          {
+            "title": "Apole",
+            "description": "Tool for appointment",
+            "url": "https://www.apole.io/",
+            "ogpImageURL": "https://wombat-tech.com/static/36650c6c653ede7cef6661e84e60d709/a0bb1/cover_apole.png"
+          },
+          {
+            "title": "Sokkuri App",
+            "description": "Game app which score how much two faces alike.",
+            "url": "https://apps.apple.com/jp/app/%E3%81%9D%E3%81%A3%E3%81%8F%E3%82%8A%E5%BA%A6%E8%A8%BA%E6%96%AD-2%E4%BA%BA%E3%81%AE%E9%A1%94%E3%81%AF%E3%81%A9%E3%81%AE%E3%81%8F%E3%82%89%E3%81%84%E4%BC%BC%E3%81%A6%E3%81%84%E3%82%8B/id1516163819",
+            "ogpImageURL": "https://wombat-tech.com/static/9c2d1d7c0e3bbe9e06370c8a78dd746c/a0bb1/cover_sokkuri.png"
+          }
+        ]
+      },
+      {
         "categoryTitle": "OSS ✅",
         "workItems": [
           {
@@ -56,7 +79,7 @@
             "title": "GLIT",
             "description": "Backend(Rails) & App Engineer(ReactNative). Recently, machine learning with Python",
             "url": "https://glit.io/",
-            "ogpImageURL": "https://glit.io/assets/ogp-f580999543cde16218e238325f3c480cd3b60740203fcde69984c89a442f5247.png"
+            "ogpImageURL": "data:image/png;base64,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"
           },
           {
             "title": "folio",
@@ -68,7 +91,7 @@
             "title": "SEPTENI VENTURES Co., Ltd.",
             "description": "New business web application development Backend & frontend engineer (Rails & Vue.js)",
             "url": "http://www.septeniventures.co.jp/",
-            "ogpImageURL": "http://www.septeniventures.co.jp/img/logo.gif"
+            "ogpImageURL": "https://i3.gamebiz.jp/images/original/1660150359600f85aeef6560011.jpg"
           },
           {
             "title": "Goldware, Inc.",
@@ -80,24 +103,7 @@
             "title": "MAMORIO",
             "description": "From infrastructure to frontend, everything about development.",
             "url": "https://mamorio.jp",
-            "ogpImageURL": "https://mamorio.jp/img/section-bgimage1-874e620d.jpg"
-          }
-        ]
-      },
-      {
-        "categoryTitle": "Personal 💪",
-        "workItems": [
-          {
-            "title": "Apole",
-            "description": "Tool for appointment",
-            "url": "https://www.apole.io/",
-            "ogpImageURL": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNTEuMzQgMTMxLjEiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMDBhZGI1O30uY2xzLTIsLmNscy02e2ZpbGw6IzM5M2U0Njt9LmNscy0ye3N0cm9rZTojMzkzZTQ2O3N0cm9rZS1taXRlcmxpbWl0OjEwO30uY2xzLTN7ZmlsbDojZmMzYzNjO30uY2xzLTR7ZmlsbDojZjhiNTAwO30uY2xzLTV7ZmlsbDojZmZmNGUwO308L3N0eWxlPjwvZGVmcz48dGl0bGU+44Ki44K744OD44OIIDI8L3RpdGxlPjxnIGlkPSLjg6zjgqTjg6Tjg7xfMiIgZGF0YS1uYW1lPSLjg6zjgqTjg6Tjg7wgMiI+PGcgaWQ9IuODreOCtCI+PGcgaWQ9Im8iPjxjaXJjbGUgY2xhc3M9ImNscy0xIiBjeD0iMjIxLjA2IiBjeT0iODAuNjgiIHI9IjMwIi8+PGNpcmNsZSBjbGFzcz0iY2xzLTIiIGN4PSIyMjEuMDYiIGN5PSI4MC42OCIgcj0iMTAiLz48L2c+PGcgaWQ9ImUiPjxlbGxpcHNlIGNsYXNzPSJjbHMtMyIgY3g9IjMyMC42NyIgY3k9IjgwLjY4IiByeD0iMzAuNjYiIHJ5PSIzMCIvPjxlbGxpcHNlIGNsYXNzPSJjbHMtMiIgY3g9IjMyMS42NyIgY3k9IjgwLjY4IiByeD0iMTAuMjIiIHJ5PSIxMCIvPjxyZWN0IGNsYXNzPSJjbHMtMyIgeD0iMzE1LjU5IiB5PSI3OC43MyIgd2lkdGg9IjIwIiBoZWlnaHQ9IjUiIHJ4PSIyLjUiLz48L2c+PGcgaWQ9ImwiPjxjaXJjbGUgY2xhc3M9ImNscy00IiBjeD0iMjcwLjEyIiBjeT0iMTAwLjg2IiByPSIxMCIvPjxjaXJjbGUgY2xhc3M9ImNscy00IiBjeD0iMjcwLjEyIiBjeT0iMTkuNjQiIHI9IjEwIi8+PHJlY3QgY2xhc3M9ImNscy00IiB4PSIyNjAuMTIiIHk9IjE5LjY0IiB3aWR0aD0iMjAiIGhlaWdodD0iODEuMjIiLz48L2c+PGcgaWQ9InAiPjxyZWN0IGNsYXNzPSJjbHMtNSIgeD0iMTE1LjUiIHk9IjYwLjI1IiB3aWR0aD0iMjAiIGhlaWdodD0iNjAuODUiLz48Y2lyY2xlIGNsYXNzPSJjbHMtNSIgY3g9IjEyNS41IiBjeT0iMTIxLjEiIHI9IjEwIi8+PGNpcmNsZSBjbGFzcz0iY2xzLTUiIGN4PSIxMjUuNSIgY3k9IjYwLjI1IiByPSIxMCIvPjxjaXJjbGUgY2xhc3M9ImNscy01IiBjeD0iMTUzLjUiIGN5PSI4MC41NiIgcj0iMzAiLz48Y2lyY2xlIGNsYXNzPSJjbHMtNiIgY3g9IjE1My41IiBjeT0iODAuNTYiIHI9IjEwIi8+PC9nPjxnIGlkPSJhIj48ZyBpZD0i6buE5Zyf6ImyIj48cmVjdCBjbGFzcz0iY2xzLTEiIHg9IjM1IiB5PSI1OC44NSIgd2lkdGg9IjIwIiBoZWlnaHQ9IjQzLjg4IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMjUuNzkgMzUuOCkgcm90YXRlKDkwKSIvPjxjaXJjbGUgY2xhc3M9ImNscy0xIiBjeD0iNjYuOTQiIGN5PSI4MC43OSIgcj0iMTAiLz48Y2lyY2xlIGNsYXNzPSJjbHMtMSIgY3g9IjIzLjA2IiBjeT0iODAuNzkiIHI9IjEwIi8+PC9nPjxnIGlkPSLpu4TlnJ/oibItMiIgZGF0YS1uYW1lPSLpu4TlnJ/oibIiPjxyZWN0IGNsYXNzPSJjbHMtNCIgeD0iNjYiIHk9IjUuMTUiIHdpZHRoPSIyMCIgaGVpZ2h0PSI5Ny43NCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTY4LjE2IDY4LjE2KSByb3RhdGUoMTUzLjMyKSIvPjxjaXJjbGUgY2xhc3M9ImNscy00IiBjeD0iNTMuOTQiIGN5PSIxMC4xMiIgcj0iMTAiLz48Y2lyY2xlIGNsYXNzPSJjbHMtNCIgY3g9Ijk3Ljk0IiBjeT0iOTcuNjkiIHI9IjEwIi8+PC9nPjxnIGlkPSLpu4TlnJ/oibItMyIgZGF0YS1uYW1lPSLpu4TlnJ/oibIiPjxyZWN0IGNsYXNzPSJjbHMtMyIgeD0iMjEuOTQiIHk9IjUuMDMiIHdpZHRoPSIyMCIgaGVpZ2h0PSI5Ny43NCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjcuNiAtOC42KSByb3RhdGUoMjYuNjgpIi8+PGNpcmNsZSBjbGFzcz0iY2xzLTMiIGN4PSI1NCIgY3k9IjEwIiByPSIxMCIvPjxjaXJjbGUgY2xhc3M9ImNscy0zIiBjeD0iMTAiIGN5PSI5Ny41NyIgcj0iMTAiLz48L2c+PC9nPjwvZz48L2c+PC9zdmc+"
-          },
-          {
-            "title": "EdisonSticker",
-            "description": "Mac Sticker Shop",
-            "url": "https://edison.base.shop/",
-            "ogpImageURL": "https://base-ec2if.akamaized.net/w=2048,a=0,q=90,u=0/images/user/logo/63c63106ffa765e036cbec3671d1c818.png"
+            "ogpImageURL": "https://user-images.githubusercontent.com/6919381/147871867-247c0ea2-0597-43f8-8702-54414035f9a7.jpeg"
           }
         ]
       }
@@ -151,16 +157,16 @@
         "categoryTitle": "Backend",
         "dataSets": [
           {
-            "label": "Ruby/Rails",
-            "level": 5,
-            "barColor": "#F8545B",
-            "annotation": "The most experienced"
-          },
-          {
             "label": "Node.js",
-            "level": 4,
+            "level": 5,
             "barColor": "#54B3F8",
             "annotation": "Use recently the most"
+          },
+          {
+            "label": "Ruby/Rails",
+            "level": 4,
+            "barColor": "#F8545B",
+            "annotation": "The most experienced"
           },
           {
             "label": "Python",
@@ -181,9 +187,9 @@
           },
           {
             "label": "Vue.js",
-            "level": 3,
+            "level": 5,
             "barColor": "#54B3F8",
-            "annotation": "So so"
+            "annotation": "Mainly use Vue currently"
           }
         ]
       },
@@ -197,22 +203,16 @@
             "annotation": "Have developed various apps"
           },
           {
+            "label": "Swift",
+            "level": 4,
+            "barColor": "#54B3F8",
+            "annotation": "Released a few apps"
+          },
+          {
             "label": "Flutter",
             "level": 2,
             "barColor": "#54B3F8",
-            "annotation": "Start from 2019"
-          },
-          {
-            "label": "Swift",
-            "level": 3,
-            "barColor": "#54B3F8",
-            "annotation": "Released some apps"
-          },
-          {
-            "label": "Android",
-            "level": 2,
-            "barColor": "#54B3F8",
-            "annotation": "So so"
+            "annotation": "From 2019"
           }
         ]
       }
