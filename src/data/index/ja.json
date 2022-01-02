@@ -5,7 +5,7 @@
   },
   "selfIntroduction": {
     "menuItemTitle": "自己紹介",
-    "description": "東京でフリーランスエンジニアをしています(小さい会社もやっています)。主にスタートアップ系の会社でバックエンド〜フロントエンド、アプリ開発まで何でもやる系のエンジニアです。最近は開発だけでなくサービス開発全般に興味があります。あとウォンバットが大好き。",
+    "description": "東京でフリーランスエンジニアをしています(小さい会社もやっています)。主にスタートアップ系の会社でバックエンド〜フロントエンド、アプリ開発まで何でもやる系のエンジニアです。最近は開発だけでなくサービス開発全般に興味があります。ウォンバット大好き。",
     "socialURLs": [
       {
         "name": "github",
@@ -20,8 +20,12 @@
         "url": "https://medium.com/@matsumotokazuya"
       },
       {
-        "name": "qiita",
-        "url": "https://qiita.com/kazuooooo"
+        "name": "zenn",
+        "url": "https://zenn.dev/kazuwombat"
+      },
+      {
+        "name": "twitter",
+        "url": "https://twitter.com/kazuwombat"
       }
     ]
   },

@@ -1,11 +1,11 @@
 /* eslint-disable no-use-before-define */
-import React from 'react'
+import { css } from '@emotion/core'
 import styled from '@emotion/styled'
 import { graphql, useStaticQuery } from 'gatsby'
-import { css } from '@emotion/core'
 import Img from 'gatsby-image'
+import React from 'react'
 import Images from '../../images'
-import { Margins, FontSize } from '../../style'
+import { FontSize, Margins } from '../../style'
 
 interface Social {
   name: string
@@ -88,7 +88,7 @@ const Description = styled.p`
 const SocialLinks = styled.section`
   margin-top: ${Margins.LittleRelated};
   display: flex;
-  width: 120px;
+  width: 150px;
   justify-content: space-between;
 `
 const SocialLink = styled.a`
