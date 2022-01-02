@@ -56,23 +56,6 @@
         ]
       },
       {
-        "categoryTitle": "OSS ✅",
-        "workItems": [
-          {
-            "title": "Cardfolio!",
-            "description": "A framework that can easily create such a business card type portfolio site",
-            "url": "https://github.com/kazuooooo/Cardfolio",
-            "ogpImageURL": "https://cdn-images-1.medium.com/max/800/1*elFI82vuKu4mk6dFT2bj9w.png"
-          },
-          {
-            "title": "SwiftUIInfinityScroll",
-            "description": "Inifinite scroll with SwiftUI",
-            "url": "https://github.com/kazuooooo/SwiftUIInfinityScroll",
-            "ogpImageURL": "https://camo.githubusercontent.com/4bacbd99ce72d44831534387cef5e68544f2ac96/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f37313135342f66366336316634372d326131632d336537372d326465662d6631343437326365313535382e706e67"
-          }
-        ]
-      },
-      {
         "categoryTitle": "As a work 👨‍💻",
         "workItems": [
           {
@@ -116,6 +99,23 @@
             "description": "From infrastructure to frontend, everything about development.",
             "url": "https://mamorio.jp",
             "ogpImageURL": "https://user-images.githubusercontent.com/6919381/147871867-247c0ea2-0597-43f8-8702-54414035f9a7.jpeg"
+          }
+        ]
+      },
+      {
+        "categoryTitle": "OSS ✅",
+        "workItems": [
+          {
+            "title": "Cardfolio!",
+            "description": "A framework that can easily create such a business card type portfolio site",
+            "url": "https://github.com/kazuooooo/Cardfolio",
+            "ogpImageURL": "https://cdn-images-1.medium.com/max/800/1*elFI82vuKu4mk6dFT2bj9w.png"
+          },
+          {
+            "title": "SwiftUIInfinityScroll",
+            "description": "Inifinite scroll with SwiftUI",
+            "url": "https://github.com/kazuooooo/SwiftUIInfinityScroll",
+            "ogpImageURL": "https://camo.githubusercontent.com/4bacbd99ce72d44831534387cef5e68544f2ac96/68747470733a2f2f71696974612d696d6167652d73746f72652e73332e61702d6e6f727468656173742d312e616d617a6f6e6177732e636f6d2f302f37313135342f66366336316634372d326131632d336537372d326465662d6631343437326365313535382e706e67"
           }
         ]
       }
