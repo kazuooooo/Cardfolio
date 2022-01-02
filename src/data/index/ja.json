@@ -76,10 +76,16 @@
         "categoryTitle": "仕事 👨‍💻",
         "workItems": [
           {
-            "title": "株式会社iCARE",
+            "title": "Carely",
             "description": "フロントエンド(Vue)を担当",
-            "url": "https://www.icare.jpn.com/",
-            "ogpImageURL": "https://prtimes.jp/i/47342/68/origin/d47342-68-671783-0.png"
+            "url": "https://www.carely.jp/",
+            "ogpImageURL": "https://user-images.githubusercontent.com/6919381/147872365-f1ed0683-9149-418f-a326-b4d7f7e1ba99.png"
+          },
+          {
+            "title": "Gotch",
+            "description": "受託開発でアプリのデザインと開発を担当",
+            "url": "https://apps.apple.com/jp/app/gotch-%E3%82%B4%E3%83%83%E3%83%81/id1526248577",
+            "ogpImageURL": "https://is5-ssl.mzstatic.com/image/thumb/Purple126/v4/d0/df/d4/d0dfd446-a1d2-a6b0-394b-8289c97be9bc/AppIcon-1x_U007emarketing-0-7-0-85-220.png/230x0w.webp"
           },
           {
             "title": "GLIT",

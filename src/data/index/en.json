@@ -76,6 +76,18 @@
         "categoryTitle": "As a work 👨‍💻",
         "workItems": [
           {
+            "title": "Carely",
+            "description": "Frontend(Vue)",
+            "url": "https://www.carely.jp/",
+            "ogpImageURL": "https://user-images.githubusercontent.com/6919381/147872365-f1ed0683-9149-418f-a326-b4d7f7e1ba99.png"
+          },
+          {
+            "title": "Gotch",
+            "description": "Aapp design and development in commissioned development",
+            "url": "https://apps.apple.com/jp/app/gotch-%E3%82%B4%E3%83%83%E3%83%81/id1526248577",
+            "ogpImageURL": "https://is5-ssl.mzstatic.com/image/thumb/Purple126/v4/d0/df/d4/d0dfd446-a1d2-a6b0-394b-8289c97be9bc/AppIcon-1x_U007emarketing-0-7-0-85-220.png/230x0w.webp"
+          },
+          {
             "title": "GLIT",
             "description": "Backend(Rails) & App Engineer(ReactNative). Recently, machine learning with Python",
             "url": "https://glit.io/",
